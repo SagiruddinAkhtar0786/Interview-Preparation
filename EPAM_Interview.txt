@@ -1,0 +1,190 @@
+Glass door questions of EPAM
+---------------------------------------------------------------
+
+Next greatest element leetcode
+what is collection ? Is map is a part of collection ?
+Basic java, Spring boot, DB connections
+SOLID principles how can you describe one of them
+Spring boot, profiling in spring boot
+Beans
+IS-A , HAS-A relationship
+ACID properties
+Generics
+Hashmap programs, Framework ach
+what does spring actuator does
+Throw vs throws
+lambdas , streams
+Custom exceptions
+123epam456ramu input / output 123mape456umar
+
+ // Step 1: Extract characters
+        StringBuilder characters = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (Character.isLetter(c)) {
+                characters.append(c);
+            }
+        }
+        System.out.println(characters.toString());
+        // Step 2: Reverse the characters
+        characters.reverse();
+
+        // Step 3: Reinsert the characters into the original positions
+        StringBuilder result = new StringBuilder();
+        int charIndex = 0;
+        for (char c : s.toCharArray()) {
+            if (Character.isLetter(c)) {
+                result.append(characters.charAt(charIndex++));
+                System.out.println(charIndex);
+            } else {
+                result.append(c);
+            }
+        }
+
+        return result.toString();
+    }
+	
+	
+[3,26,15,32,2,5,6,25] sort all mutliples of 5 in array without changing position of any other elemet
+[-1,0,1,4,5,-5] print all unique triplets whose sum is zero
+interfaces, abstract classes, 
+Explain java oops concepts utilized into you framework
+singletondesign patern
+will iterator work for hashmap
+diff b/w 401 and 403
+diff b/w put and post
+check if brackets array are balance
+Stateful vs stateless
+
+reverseString(s.substring(1)) + s.charAt(0);
+
+------------------------------------------------------------------------------------------
+
+Interview Questions 
+----------------------
+
+Round 1
+-----------------
+Polymorphism and its types
+Solid principles
+Default methods in java8
+Exception handling and types of exception
+Map and hashmap working
+wait and sleep
+
+
+Coding
+-------
+public class ProblemSolving {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1, "Computer");
+		map.put(2, "Mouse");
+		map.put(8, "Computer");
+		map.put(4, "Trackpad");
+		map.put(6, "Mouse");
+		map.put(5, "Computer");
+		
+		List<Integer> al=map.entrySet().stream().filter(m -> m.getValue().equalsIgnoreCase("Computer")).map(v -> v.getKey()).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		
+		for(Integer i : al) {
+			System.out.println(i);
+		}
+	
+				
+	}
+
+}
+
+Filter all map values has computer in ascending order using streams
+
+//Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+//You may assume that each input would have exactly one solution, and you may not use the same element twice.
+//You can return the answer in any order.
+// 
+//Example 1:
+//Input: nums = [2,7,11,15], target = 9
+//Output: [0,1]
+//Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+// 
+//Example 2:
+//Input: nums = [3,2,4], target = 6
+//Output: [1,2]
+
+--------------------------------
+
+ROUND- 2 => 1:30 hr
+----------------------
+1, why you have functional interfaces in java when you can declare an abstract class in interface itself
+
+2, for example i have a function interface
+
+class Bank{
+	accountvalidation(accountnumber)
+}
+
+write the implementation of abstract method accountvalidation of functional interface bank
+
+3, Default methods in java8
+
+class Bank{
+	default accountvalidation(accountnumber)
+}
+class HDFC extends Bank{
+
+}
+class BAJAJ extends Bank{
+	//i want to use accountvalidation functionlity here and i want to add some other property ... how can i do that
+}
+
+4,list<Strings> al=Arrays.asList{"sravani","Swetha","sai","Sanket"}
+
+print all names whose length is greater than 4 using streams
+print the name with larger no of characters using stream
+
+5,Streams , Intermediate , terminal operations
+6,Transient keyword, Does it be passed over a network
+7,can static variable can be passed over a neetwork in java
+8,classloader and its types
+9,static variable , static method , static block in which area it will get memory
+10,Spring boot layers ( presentation , business , persistence , database)
+11,Dependency injection and its types
+12,what internally happens when @springbootApplication executes
+13,MetaSpace
+14,How do you define a bean? Default scope - and how do we change the scope of beans?
+15,Sterotype annotation
+16,Write a custom exception class in java (Age not found exception) ? How do you use exception class in your custom exceptions
+17,How do you handle exceptions in java
+18,@componentscan , @configuration 
+19,difference b/w @controller and @RestController
+20,Difference b/w put and post
+21,when i want to partially update a resource which mapping i need to use
+22,How do you read properties from application.properties files
+23,how to disable embedded tomcat server in springboot application
+24,how springbootproject will load into classloader and Spring Boot Dev tool starter
+25,why so many jar will added when we a dependency in pom.xml.. how they are adding internally
+26,volatile variable
+27,write a basic spring boot application and classes you need and database connection class
+//store employee data
+//fetch employee data based on empid
+//delete employee data based on empid
+//Updated employee record
+you need to write controller class with respective mapping methods, service class, Respository class
+28,Spring JPA respository configurations and how do you create database connection mappings object in spring boot
+29,Primary key
+30,Composite key
+31,Unique key constraints
+32,Joins and left outer join
+33,given a table employee contains empid,empname,deptid and department table contains deptid,deptname print empid,empname,deptname using join query
+34,How do you configure hover in spring datajpa
+35,Difference b/w primary and qualifer annotation
+36,when you have both primary and qualifer annotations for same name beans then what will get priority
+37,we have two classes class A method has scope public and in subclass overriden method has scope default it that be possible in java and why ?
+38,Scope of default, Protected method
+39, you have multiple exceptions like arithemtic , array index out of bounds,... i want to handle mutliple exceptions in a single catch block how can you do that
+40,where do you close conenction objects and cursor result set object in a programs
+41,Try with resources
+
+
+

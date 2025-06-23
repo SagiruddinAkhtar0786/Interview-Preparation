@@ -1,0 +1,323 @@
+output for following
+---------------------------
+
+String s1 = "hello";
+String s2 = "hello";
+String s3 = new String("hello");
+String s4 = new String("hello").intern();
+ 
+// System.out.println(s1 == s2); // Output: true or false? //true
+// System.out.println(s1 == s3); // Output: true or false? //false
+// System.out.println(s2 == s4); // Output: true or false? //true
+
+When you compare s4 and s2 using ==, they refer to the same object in the string pool because s4.intern() ensures that s4 points to the string in the pool.
+When you use .equals(), it compares the content, which is also "hello" in both cases.
+
+System.out.println(s4 == s2);    // true (both refer to the same object in the pool)
+System.out.println(s4.equals(s2)); // true (content is identical)
+
+
+
+
+try {
+	doSomething();
+} catch (Exception e) {
+	e.printStackTrace(); //executed
+} catch (FileNotFoundException e) {
+	e.printStackTrace(); 
+}
+
+In the code you provided, if any other exception (not FileNotFoundException) is thrown by the doSomething() method, the first catch block (catch (Exception e)) will execute.
+
+However, this code will not compile due to the placement of the catch (FileNotFoundException e) 
+block after catch (Exception e). This violates Java's exception-handling rules because FileNotFoundException 
+is a subclass of Exception. The compiler ensures that the more specific exceptions (FileNotFoundException) are 
+caught before the more general exception
+
+next greatest element in the array
+-------------------------------------
+IP: arr[] = [ 4 , 5 , 2 , 25 ]
+OP: arr[] = [ 5 , 25 , 25 , -1]
+
+
+(1) Next greatest element leetcode
+package interviewCoding;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+public class NextGreaterElement_I {
+
+	public static void main(String[] args) {
+		
+		int nums1[] =  {4,1,2};
+		int nums2[] = {1,3,4,2};
+		int arr[] = nextGreaterElement(nums1 , nums2);
+		System.out.println(Arrays.toString(arr));
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        
+        Stack <Integer> st = new Stack<Integer>();
+        int NGE[] = new int[nums2.length];
+        Map<Integer,Integer> mp = new HashMap<Integer,Integer>();
+         for(int i = nums2.length-1 ; i>=0 ; i--){
+            int ele = nums2[i];
+
+            while(!st.isEmpty() && ele >= st.peek())
+                st.pop();
+
+            if(st.isEmpty())
+            {
+                NGE[i] = -1;
+                st.push(ele);
+                mp.put(ele,NGE[i]);
+                continue;
+            }
+            if(!st.isEmpty() && ele < st.peek()){
+                NGE[i] = st.peek();
+                st.push(ele);
+                mp.put(ele,NGE[i]);
+
+            }
+         }
+
+         int res[] = new int[nums1.length];
+         int k = 0;
+         for(int val : nums1){
+           res[k] = mp.get(val);
+           k++;
+         }
+
+return res;
+
+    }
+
+	
+
+}
+public class TwoSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int nums[] = {2,7,11,15};
+		int [] nums2  = {-10,-8,-2,1,2,5,6};
+		int target = 9;
+		int target2 = 0;
+
+		int indices[] = findTargetValue(nums, target);
+		System.out.println("indexes "+Arrays.toString(indices));
+		int indices1[] = findTargetvalueByN(nums2,target2);
+		System.out.println("indexes "+Arrays.toString(indices1));
+
+	}
+	
+	public static int[] findTargetvalueByN(int arr[] , int target) {
+		
+		int i = 0 , j = arr.length-1;
+		
+		while(i < j) {
+			int sum = arr[i]+arr[j];
+			if(sum < target) {
+				i++;
+			}
+			else if(sum > target) {
+				j--;
+			}else {
+				return new int[] {++i,++j}; //1st,2nd indexes it means
+			}
+		}
+		
+		return new int[] {};
+	}
+	
+	
+	
+	
+
+}
+ 
+
+
+primary and qualifer syntax
+-------------------------------
+vehicle interface  drive()
+
+
+car , bike  drive()
+
+
+@Autowired 
+Vehicle v
+
+@Primary
+@Bean
+Class car{}
+
+
+35,Difference b/w primary and qualifer annotation
+
+The @Primary and @Qualifier annotations in Spring are both used for resolving bean injection conflicts, but they work in different ways. Here’s a comparison between the two:
+
+@Primary   :annotation is used when there are multiple beans of the same type and you want to inject the bean byDefault then we use 
+
+@Configuration
+class BeanConfiguration {
+
+    @Bean
+    @Primary
+    public DataSource primary() {
+        return new DataSource();
+    }
+
+    @Bean
+    public DataSource secondary() {
+        return new DataSource();
+    }
+}
+
+///////////
+@Qualifier : when we have the multiple beans of  same type and we want to use specific bean for a particular place
+then we use @Qualifier annotation
+
+@Configuration
+class ConfigurationClass {
+
+    @Bean
+    public DataSource primary() {
+        return new DataSource();
+    }
+
+    @Bean
+    public DataSource secondary() {
+        return new DataSource();
+    }
+}
+
+@Component
+class ComponentClass {
+
+    private final DataSource ds;
+
+    public ComponentClass(@Qualifier("secondary") DataSource dataS) {
+        this.ds = dataS;
+    }
+
+    public DataSource getDataSource() {
+        return ds;
+    }
+
+
+}
+
+------------------------------------------
+linkedlist implementation add, delete , display, reverse
+
+
+package DATASTRUCTURE_Implemetation;
+
+class LinkedList {
+
+    // Node class
+    private static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    private Node head; // Head of the list
+
+    // Add a node at the end
+    public void add(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
+    // Delete a node with a specific value
+    public boolean delete(int data) {
+        if (head == null) {
+            return false; // List is empty
+        }
+        if (head.data == data) { // If the head node is to be deleted
+            head = head.next;
+            return true;
+        }
+        Node current = head;
+        while (current.next != null && current.next.data != data) {
+            current = current.next;
+        }
+        if (current.next == null) {
+            return false; // Data not found
+        }
+        current.next = current.next.next;
+        return true;
+    }
+
+    // Display the linked list
+    public void display() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("null");
+    }
+
+    // Reverse the linked list
+    public void reverse() {
+        Node previous = null;
+        Node current = head;
+        Node next = null;
+
+        while (current != null) {
+            next = current.next; // Store next node
+            current.next = previous; // Reverse the current node's pointer
+            previous = current; // Move previous to current
+            current = next; // Move current to next
+        }
+        head = previous; // Update head to the last node
+    }
+
+    // Main method to test the linked list
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+
+        // Adding elements
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        System.out.println("Original List:");
+        list.display();
+
+        // Deleting an element
+        list.delete(20);
+        System.out.println("After Deletion of 20:");
+        list.display();
+
+        // Reversing the list
+        list.reverse();
+        System.out.println("After Reversing:");
+        list.display();
+    }
+}

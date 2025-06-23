@@ -1,0 +1,8 @@
+How many years of work experience do you have with Docker and Kubernetes?
+How many years of work experience do you have with Git and Gradle/Maven?
+How many years of work experience do you have with AWS services like EC2, RDS, S3?
+agile environment.CI/CD ,Unit Testing e.g. JUnit, Groovy
+Experience implementing CI/CD pipelines.
+
+*What is JWT?*
+Experience with cloud platforms (AWS, Azure, Google Cloud, Oracle).

@@ -1,0 +1,70 @@
+Infosys Managerial Round - 27/09/2024
+Duration - 20 min (Virtual)
+
+1. Intro, Tech and project in breif
+2. What's your working methodology ? -> Agile and explained 
+3. What management tool you're using -> JIRA
+4. Have you worked on Kafka, kubernetes, etc. ? -> I didn't got opportunity to work in company, but I've done training during in MCA. 
+5. Do you write unit test cases, scripts for testing after development ? -> JUnit
+6. Are you experienced in automation ? -> Asked for clarity of question -> Like have you used Jmeter, SonarQube, SonarLint.
+	- I told sometimes I've worked on these for code smell, blocker. 
+7. We are looking for a person having 95% of experience in Automation along with Java, spring boot - I said once I'll get a chance, I'll learn the new technologies soon as already having some ideas about subjects.
+
+And other questions.
+
+Infosys - 
+ 1. Intro and tech used
+ 2. Domain you're working and project explanation 
+3. Working style if production issue comes -> How you prioritize the tasks like prod issue, uat issue and CR
+ 4. Spring MVC flow 
+5. How we can provide security to http gateway in spring boot ? - OAuth, OAuth2 
+6. Methods in Rest - Getmapping, postmapping, putmapping, deletemapping 
+7. Getmapping, Postmapping 
+8. We are passing sensitive data like mobile number, address. Which one should you'll use and why ? - Answer: Postmapping, as getmapping will expose the data in url 
+9. Postmapping vs Putmapping 
+10. Given a map of <Name, Gender>. Return the results in a Map containing only records where Gender = "M" using java 8 streams. In depth explanation. 
+11. == vs .equals()
+12. Mutable classes and Immetubale classes 13. String, StringBuffer 
+14. Optional, Exception handling 
+15. If not using JPA, then how you're connecting with db
+
+Infosys sagir
+
+program to reverse word by word
+10101 == output >  11100
+annotations 
+@springBootApplication
+hasmap vs HashTable
+difference between == and .equals
+statefull and stateless application
+
+
+
+TCS SAGIR
+
+
+Introduction tell me only about your project, technology you are using. 1)interface I1{   int sum(int a, int b); } impement it using lambda expression Solution : I1 obj = (a,b) -> a+b; *************************** (2) ArrayList<String> list = newArrayList( Arrays.asList("BANANA",APPLE,"BANANA","Grapes")) print COunt and fruits name like ==> BANANA-2, Apple-1, Grapes-1 using Streams API anD normal *************************** (3)what is Comparator (4)reverse ArrayList Using Comparator *************************** (5).equals and == operator String s1 = "sagir"; String s2 = new String("sagir"); if(s1 == s2) --> print result if(s1.equals(s2)) -- > print result i dont want to use s1.equals(s2) hten how can it be true tell me how s1== s2 will be true in this case , i dont want to be true with s1.equals(s2); *************************** (6) will below code will execute properly try{ } try{ } Catch{ } finally{ } *************************** (7) will below code will execute properly try{ return 0; } Catch(nullPointerException ex){ } Catch(Exception x){ } finally{ } *************************** (8) will below code will execute properly try{   try{     return 0;   } } Catch(nullPointerException ex){ } Catch(Exception x){ } finally{ } *************************** (9)throw and throws (10)second highest salary (11)@Requetsparam (12)Junit (13)In your project you are using JSP for front end, what you are using inside JSp (14)SRING MVC Architecture (15) ***************88 select salary from emp order by salary desc limit 1 offset 1 : second Highest salary
+
+
+
+TCS - 13/09/2024
+
+1. Intro and tech used
+2. Features of Spring Boot
+3. @SpringBootApplication Annotation and its internal -> @Configuration, @EnableAutoConfiguration, @ComponentScan
+4. @EnableAutoConfiguration in detail
+5. @Controller VS @RestController
+6. How to change port in spring boot - Told we can change in properties file but forgot the statement server.port=9090
+7. Java 8 features - Functional Interface, Lambda Expression, CompletableFuture, Method referrence
+8. stream - Definition and coding
+9. Optional class 
+10. @Profile in spring boot 
+11. JPA in spring boot - Not answered 
+12. are you using AWS - No not using 
+13. Remove duplicates in the given list of strings using streams and without using streams (Set, Map)
+
+List<String> res = list.stream().distinct().collect(Collectors.toList());
+
+- Why you want to join TCS ?
+- Notice period 
+- Preferred location

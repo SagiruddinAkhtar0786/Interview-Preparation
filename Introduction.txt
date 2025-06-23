@@ -1,0 +1,34 @@
+Thanks for giving me opportunity to introduce my self.
+Hi good morning, this is Sagiruddin Akhtar. I've Done my graduation in BCA from Patna Muslim Science college patna in the year 2015-2018  with an aggregate 
+of 67.4%.
+and completed my Master's From university Of hyderabad in MCA in Year Of 2019-2022 with an aggregate of 8.04 CGPA .
+
+coming to my work experience, I've joined in Azentio software in Dec 2021 as Intern and after Completeing intern for 6 month , converted to full time Employee 
+from August 2022 as a software Development Engineer and now i am having 2.5 year of full time experience in Azentio. And I am continuuing on that.
+
+I've got to be involved in web applications, web services, standalone applications.
+ 
+So my front-end expertise is about the HTML, CSS, JSP and JavaScript and coming to backend tech. I've been using Java, spring, springboot and rest API. and 
+PL SQL,is one thing that I have a little bit intermediate level knowledge while coming to the database.
+
+
+So basically we have a major product in our company. It is called as Amlock. It is an anti money laundering product. So we provide this product to our 
+clients which are banks and this will be useful in fraud detection based on the transactions that occur in real time.
+ 
+So in the application we will have the Dow Jones team providing us a few of the criminal records information such as people like Osama binladen, Dawood 
+Ibrahim. So they give their sensitive information such as like contact related information or the date of birth or location and their
+relationship details.
+
+So basically when the transactions occur in our amlock this transactions will be screened against the particular predefined rules which are already
+given by the users at client place. So if any of the transaction matches the predefined rule, let's say maybe the name matches with the score which is
+given as 90% or above case and bring it to the superior user notice and they'll be taking an action upon it.
+ 
+ 
+And coming to my role in Azentio I am working as a Java backend developer. So as we have the separate dedicated team for database's so whenever we have 
+any client requirement or new gatherings or customizations will have this call including me with the business analyst and the technical manager along
+with the client. So they will discuss the requirement and which is the best possible approach and what Will be shared to the client and after the review 
+will get to the development part me along with the database person will be discussing on our inputs and what needs to be developed to the CR.
+ 
+So this is all my usual day-to-day role goes at azentio and this is my little bit brief introduction. Thank you
+
+

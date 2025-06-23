@@ -1,0 +1,532 @@
+Database
+----------
+Database is an organized collection of data stored in a computer system and is usually managed by a DBMS
+
+1, Relational Database - A relational database is made up of a set of tables with data that fits into a predefined category.
+Yes, MySQL, SQL Server, and Oracle are all examples of relational database management systems (RDBMS). 
+They use Structured Query Language (SQL) to manage and manipulate the data stored in tables.
+
+2, Distributed Database - A distributed database is a database in which portions of the database are stored in multiple physical locations, 
+and in which processing is dispersed or replicated among different points in a network. 
+
+Imagine a global e-commerce company like Amazon. They have customers all over the world and need to ensure that their website is fast, reliable, and responsive no matter where the user is located. To achieve this, they use a distributed database system.
+
+3, cloud Database - A cloud database is a database that typically runs on a cloud computing platform Example : GCP , microsoft azure
+
+4, NoSQL Database -
+Example - Mongo DB , cassandra
+
+SQL => A server machine is used in the implementation of the structured query language (SQL), processing database queries and returning results.
+--- 
+
+1, DDL => Data Definition language
+-------------------------------------
+Used for creating database objects like creating tables, view and indexes
+
+CREATE : CREATE Table table_name (
+--------	Columnname1 datatype,
+			Columnname2 datatype,
+			);
+
+ALTER Modifies an existing database object, such as a table like rename tablename or columnname
+-----
+
+Alter table Students Rename to Student;
+
+Alter table Student Rename Column ID to StudentID;
+
+Alter table Department ADD Column Name varchar(100);
+
+
+DROP =>  Deletes an entire table, a view of a table, or other objects in the database , The SQL DROP TABLE statement is used to delete tables in a 
+-----    database, along with all associated data, indexes, triggers, constraints and permission specifications.
+
+Use DROP TABLE IF EXISTS query to prevent errors when dropping a table that does not exist
+
+DROP and TRUNCATE in SQL remove data from the table. The main difference between DROP and TRUNCATE commands in SQL is that DROP removes the table or database completely, while TRUNCATE only removes the data, preserving the table structure.
+
+
+
+2, DML => used to modify the data present in a database object
+-------
+
+Insert , Update , delete
+
+Insert into table_name (column1 , column2 , coulumns3 ) values (value 1 , value 2 , value 3) ;
+
+DELETE : SQL DELETE is a basic SQL operation used to delete data in a database. we can also delete particular record from db when we use where stmt.
+------
+
+3,DQL => used to retrieve data from database objects
+------------
+Select
+
+4, Data control language (DCL) => is a programming language used by database administrators to control or grant other users access to databases.
+---------------------------
+
+GRANT => Gives a privilege to the user.
+
+REVOKE => Takes back privileges granted by the user.
+
+5. Transaction Control Language => To automatically update databases, the relational engine uses transaction control language (TCL). For instance, 
+------------------------------
+the database can reverse a mistaken transaction using the ROLLBACK command.
+
+
+SQL Datatypes
+-------------
+1, Numeric datatypes => BigInt , Int , decimal
+2, String Datatypes => varchar , char , text
+3, Date datatype => DATE , TIME , DATETIME
+
+SQL Operators
+-------------
+1,Arithemtic => + , * , - , / , %
+2,Bitwise =>  in SQL are used to perform bitwise operations on binary values in SQL queries
+3,Compound
+4,logical  => AND , OR , NOT
+5,Comparison  =>  {  = , > , < , >= , <= , <> (not like ) )
+
+Select * from employee where employee_name NOT LIKE 'A%';  //print all employee names apart from starting with A
+
+Special operators 
+-------------------
+
+ALL
+ANY
+IN
+BETWEEN
+SOME
+UNIQUE
+
+ACID Properties
+---------------
+
+1) Atomicity
+--------------
+The term atomicity defines that the data remains atomic. It means if any operation is performed on the data, either it should be performed or executed completely or should not be executed at all. It further means that the operation should not break in between or execute partially. In the case of executing operations on the transaction, the operation should be completely executed and not partially.
+
+2) Consistency
+---------------
+The word consistency means that the value should remain preserved always.In DBMS, the integrity of the data should be maintained, which means if a change in the database is made, it should remain preserved always. In the case of transactions, the integrity of the data is very essential so that the database remains consistent before and after the transaction. The data should always be correct.
+
+3) Isolation
+-------------
+The term 'isolation' means separation. In short, the operation on one database should begin when the operation on the first database gets complete. It means if two operations are being performed on two different databases, they may not affect the value of one another. In the case of transactions, when two or more transactions occur simultaneously, the consistency should remain maintained. Any changes that occur in any particular transaction will not be seen by other transactions until the change is not committed in the memory.
+
+4) Durability
+---------------
+Durability ensures the permanency of something. In DBMS, the term durability ensures that the data after the successful execution of the operation becomes permanent in the database. The durability of the data should be so perfect that even if the system fails or leads to a crash, the database still survives. For committing the values, the COMMIT command must be used every time we make changes.
+
+Queries
+---------
+CREATE DATABASE database_name;
+SHOW DATABASES;
+DROP DATABASE database_name;
+
+Create another table from existing table
+-------------------------------------
+Create table Department AS Select Department_id from Students;
+
+Temporary Tables : Temporary Tables are most likely as Permanent Tables. Temporary Tables are Created in TempDB and are automatically deleted as soon as the last connection is terminated. Temporary Tables helps us to store and process intermediate results.
+
+SQL TOP, LIMIT, and FETCH FIRST clauses are used to retrieve a specific number of records from a table. 
+-------------------------------------------------------------------------------------------------------
+The OFFSET keyword is utilized to indicate beginning rows from where to select rows. For instance,
+
+
+SELECT TOP 4* FROM Customer ORDER BY Salary DESC;
+
+SELECT * FROM CUSTOMER WHERE Salary > 50000 LIMIT 2;
+
+SELECT * FROM Employee LIMIT 2 OFFSET 2;
+
+SELECT * FROM Employee FETCH FIRST 3 ROWS ONLY;
+
+In this example, we will use SELECT IN statement on a list of values in WHERE Clause.
+-------------------------------------------------------------------------------------
+SELECT * FROM STUDENT WHERE course_id IN (1, 2, 3);
+
+WHERE => WHERE keyword is used for fetching filtered data in a result set
+-----
+
+ORDER BY => The ORDER BY statement in SQL is used to sort the fetched data in either ascending or descending according to one or more columns. 
+---------
+
+GROUP BY => The GROUP BY Statement in SQL is used to arrange identical data into groups with the help of some functions.
+---------
+
+GROUP BY clause is used with the SELECT statement.
+In the query, the GROUP BY clause is placed after the WHERE clause.
+In the query, the GROUP BY clause is placed before the ORDER BY clause if used.
+In the query, the Group BY clause is placed before the Having clause.
+
+
+Select Customer_id,First_name,age from customers where AGE BETWEEN 21 AND 31; //return records including 21 and 31
+
+Select customer_id,first_name,age from Customers where AGE IN (21,31); //only return in between records
+
+SELECT Fname, Lname FROM employee WHERE Address IN ('Delhi','Himachal'); //includes this data
+
+SELECT Fname FROM employee WHERE Address NOT IN ('Delhi', 'Lucknow'); //excludes this data
+
+select * from Department where Name <> 'EEE' ; //not EEE
+
+SELECT * FROM geeksforgeeks WHERE name!='Harsh';
+
+Select * from Department where JoiningDate NOT NULL; 
+
+SELECT * FROM geeksforgeeks WHERE email IS NULL;
+
+
+UNION
+--------
+The UNION operator in SQL is used to combine the result set of multiple SELECT statements and return one result set.
+
+Each table used within UNION must have the same number of columns.
+The columns must have the same data types.
+The columns in each table must be in the same order.
+
+SELECT Country FROM Emp1 
+UNION ALL
+SELECT Country FROM Emp2 
+ORDER BY Country;     
+
+UNION ALL => including duplicates
+UNION => combines both tables and remove duplicates
+
+SQL | Except Clause
+--------------------
+
+In SQL, EXCEPT returns those tuples that are returned by the first SELECT operation, and not returned by the second SELECT operation.
+
+SELECT Name
+       FROM Students
+EXCEPT
+SELECT NAME
+       FROM TA;
+	   
+BETWEEN
+---------
+	   
+The SQL BETWEEN operator is used to filter results within a specified range, including the start and end values
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+-----------------------
+
+Select EmployeeID,EmployeeName,
+CASE
+	when Branch='CSE' THEN 'Computers',
+	ELSE 'Electronics'
+END AS Branches
+
+From Departments;
+
+----------------------------------------------------------------------------------------------------------------------
+SQL Aggregate functions
+------------------------
+
+It is used to summarize data, by combining multiple values to form a single result.
+
+Count()
+Sum()
+Avg()
+Min()
+Max()
+
+WITH
+-------
+The WITH keyword in SQL is used to create a Common Table Expression (CTE). While it's not strictly necessary for solving the problem, using a CTE can simplify complex queries by breaking them into more manageable parts.
+
+Constraints
+---------------
+NOT NULL => NOT NULL constraints make sure that a column does not hold null values
+
+CREATE TABLE table_Name
+(
+column1 data_type(size) NOT NULL,
+column2 data_type(size) NOT NULL,
+);
+
+NULL VALUE: A column cannot have a NULL value by using the NOT NULL flag.
+-----------
+UNIQUE KEY: A unique value makes sure that each value in a column is distinct.The UNIQUE constraint ensures that all values in a column (or a set of 
+-----------
+columns) are distinct, but it allows multiple NULL values
+PRIMARY KEY: A NOT NULL and UNIQUE combination. Identifies each row in a table individually. => unique + not null . PRIMARY KEY in SQL is a column ------------ (or group of columns) that uniquely identifies the records in that table. A primary key must contain unique values and can not have any NULL value.
+
+1, no null values
+2, unique values
+3, only primary key column per table
+
+A FOREIGN KEY: Guards against actions that would break links between tables. A foreign key is a column or a combination of columns in a table that -------------- establishes a link between two tables in a relational database. It refers to the primary key in another table, creating a relationship between them.
+
+Create table employees (
+	EmployeeID INT PRIMARY key,
+	EmployeeSalary Decimal(10,2),
+	DepartmentID INT
+	FOREIGN KEY (DepartmentID) References Department(DepartmentID)
+);
+
+Crate table Department(
+	DepartmentID INT PRIMARY KEY,
+	Departmentname Varchar(100),
+	Departmentbranch varchar(100),
+);
+
+Primary Table: Department
+Primary Key: DepartmentID
+Foreign Table: Employees
+Foreign Key: DepartmentID (references Department.DepartmentID)
+
+CHECK: 
+--------
+Verifies that the values in a column meet a particular requirement. Check Constraint is used to specify a predicate that every tuple must satisfy in a given relation
+
+CREATE TABLE pets(
+        ID INT NOT NULL,
+        Name VARCHAR(30) NOT NULL,
+        Breed VARCHAR(20) NOT NULL,
+        Age INT,
+        GENDER VARCHAR(9),
+        PRIMARY KEY(ID),
+        check(GENDER in ('Male', 'Female', 'Unknown'))
+        );
+
+Composite key
+--------------
+A composite key is made by the combination of two or more columns in a table that can be used to uniquely identify each row in the table when the columns are combined uniqueness of a row is guaranteed
+
+A composite key can also be made by the combination of more than one candidate key.
+A composite key cannot be null.
+
+Create table Employee(
+	EmployeeID INT,
+	EmpName varchar(100),
+	EmpAdd varchar(100),
+	EmpAddID varchar(100),
+	PRIMARY KEY ( EmployeeID , EmpAddID)
+);
+
+Default
+---------
+The DEFAULT Constraint is used to fill a column with a default and fixed value.
+The value will be added to all new records when no other value is provided.
+
+CREATE TABLE Geeks (
+ID int NOT NULL,
+Name varchar(255),
+Age int,
+Location varchar(255) DEFAULT 'Noida');
+
+INSERT INTO Geeks VALUES (7, 'Khushi', 26,DEFAULT);
+
+
+View
+-------
+Views in sql are kind of virtual tables
+Its doesn't data on the disk like tables
+View defines a customized query which retrieves data from two or more tables and represents data as if it was coming from a single table.
+
+CREATE VIEW view_name AS
+SELECT column1, column2.....
+FROM table_name
+WHERE condition;
+
+CREATE VIEW Orders_view AS 
+Select c.customer_id, (c.first_name ||' '|| c.last_name) as customer_name, o.item , o.amount from Customers c
+Left Join Orders o
+where c.customer_id = o.customer_id;
+
+---------------------------
+joins
+---------
+SQL joins are used to combine rows from two or more tables based on a related column between them.
+
+1. INNER JOIN
+--------------
+Definition: The INNER JOIN keyword selects records that have matching values in both tables.
+
+SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+INNER JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+
+2. LEFT JOIN (or LEFT OUTER JOIN)
+---------------------------------
+Definition: The LEFT JOIN keyword returns all records from the left table (table A) and the matched records from the right table (table B). The result is NULL from the right side if there is no match.
+
+SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+LEFT JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+
+if their is no match department it will return null
+
+
+3. RIGHT JOIN (or RIGHT OUTER JOIN)
+--------------------------------------
+Definition: The RIGHT JOIN keyword returns all records from the right table (table B) and the matched records from the left table (table A). The result is NULL from the left side when there is no match
+
+SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+RIGHT JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+
+In this example, all departments will be listed, and if a department does not have any employees, EmployeeID, FirstName, and LastName will be NULL.
+
+4. FULL JOIN (or FULL OUTER JOIN)
+------------------------------------
+Definition: The FULL JOIN keyword returns all records when there is a match in either left (table A) or right (table B) table records. It returns NULL for non-matching rows from either table.
+
+SELECT Employees.EmployeeID, Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+FULL JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+
+SQL indexes
+------------
+Index is a schema object.
+It is used by the server to speed up the retrieval of rows by using a pointer
+An index helps to speed up select queries and where clauses,
+Indexes can be created or dropped with no effect on the data
+
+
+Clustered indexes
+-----------------------
+Clustered indexes physically order the columns based on their actual value
+You only want to use clustered indexes when your column values are in sequential or sorted order and there are no repeat values
+
+Basic Index Creation
+---------------------
+To create a simple index on a single column:
+CREATE INDEX index_name ON TABLE_name(column_name);
+
+Unique Index
+-------------
+A unique index ensures that all values in the indexed column(s) are unique:
+CREATE UNIQUE INDEX index_name ON Table_name(column_name);
+
+Composite Index
+-------------------
+A composite index includes multiple columns:
+CREATE INDEX index_name ON table_name(column1,column2);
+
+
+A column contains a wide range of values.
+A column does not contain a large number of null values.
+One or more columns are frequently used together in a where clause or a join condition.
+
+CREATE INDEX idx ON STUDENTS(NAME);
+
+2. Altering Indexes
+---------------------
+While SQL itself does not support direct alteration of indexes (like ALTER INDEX), you can achieve similar effects by dropping and then recreating the index with the desired changes.
+
+DROP INDEX index_name ON table_name;
+
+In some databases (like SQL Server), you can create indexes on views, which are called "indexed views" or "materialized views" in other database systems.
+
+Create INDEX Index_name on View_name(Column_name)
+
+SHOW INDEX FROM table_name;
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Difference blw primary key and unique
+---------------------------------------
+
+primary key 
+-----------
+1, ensures that data is unique and doesnot allow any null value
+2, automatically creates indexes on that particular and it will increases the performance
+3, Their is only one primary key in a table
+
+Unique key
+--------------
+1, ensures that data is unique and allow one or more null values based on db which we are using
+2, automatically creates indexes on that particular and it will increases the performance
+3, multiple columns can be declared as unique constraint, each ensuring the uniquiness of different set of columns
+
+CREATE TABLE Example (
+    ID INT PRIMARY KEY,                -- Primary key constraint
+    Email VARCHAR(255) UNIQUE,         -- Unique constraint
+    PhoneNumber VARCHAR(20) UNIQUE     -- Another unique constraint
+);
+
+
+Stored procedures
+--------------------
+USed to perform series of sql operation like insertion,deletions or updating tasks.generally used for tasks that may involve complex business logic or multiple SQL statements.
+
+Procedures do not return a value directly. Instead, they perform actions and can use output parameters to return values to the caller. They can also return result sets.
+
+Procedures are called using the CALL statement or EXEC statement (depending on the SQL dialect). They are executed as a separate process.
+
+Procedures are commonly used for tasks such as performing batch operations, data validation, and executing complex business logic.
+
+Function
+----------
+Functions are used to perform computations or transformations and return a single value. They are generally used for operations that involve calculations or data retrieval that needs to be used within a query.
+
+Functions must return a single value, which is specified using the RETURN statement. They can also return a table or a set of rows in some SQL dialects.
+
+Side Effects: Functions are generally expected to have no side effects. They should not modify the state of the database. They are used primarily for computations and data retrieval.
+
+Usage: Functions are used for tasks such as calculations, data transformations, and returning specific values that are used within queries.
+
+NO SQL
+---------
+=> Data is stored in a variety of formats, including key-value pairs, documents, wide-column stores, or graphs.
+=> Designed for easy horizontal scaling, where data is distributed across multiple servers.
+=> This is ideal for handling large volumes of unstructured or semi-structured data.
+=> Does not require a predefined schema. 
+=> The absence of complex joins and flexible schema allows for faster read/write operations.
+=> Data can be added without defining tables and columns beforehand, allowing for more flexible and agile development
+
+Query to find employee count based on department id
+------------------------------------------------------
+SELECT d.department_name, COUNT(*) AS employee_count
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.department_id
+GROUP BY d.department_id;
+
+
+Choosing the Right Approach between subquereies and aggregate functions
+
+Use Subqueries when:
+----------------------
+You need to filter or correlate results based on the output of another query.
+The query logic requires multiple levels of filtering or aggregation.
+
+Use Aggregate Functions when:
+--------------------------------
+You need straightforward aggregation or summary statistics.
+Performance is a key concern and the task can be achieved with direct aggregation.
+
+
+SQL injection
+---------------
+
+SQL injection is a type of cyber attack where an attacker manipulates SQL queries to execute malicious commands. It occurs when an application incorrectly handles user input and allows malicious SQL code to be inserted into a query, potentially leading to unauthorized access or manipulation of the database.
+
+Parameterized Queries: 
+----------------------
+Use parameterized queries or prepared statements to safely include user inputs in SQL queries. This separates SQL code from data.
+
+sql
+Copy code
+SELECT * FROM users WHERE username = ? AND password = ?;
+
+Stored Procedures: Use stored procedures to encapsulate SQL logic and -------------------
+avoid direct execution of user input.
+
+Input Validation: 
+-----------------
+Validate and sanitize user input to ensure it conforms to expected formats and does not include malicious code.
+
+Least Privilege: 
+-----------------
+Grant the minimum permissions necessary to database accounts used by the application.
+
+Error Handling:
+----------------
+ Avoid detailed error messages that can provide clues to attackers about the database schema or other sensitive information.

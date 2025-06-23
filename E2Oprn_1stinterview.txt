@@ -1,0 +1,28 @@
+Introduction
+flow of SPRING MVC, spring boot
+how will u redirect a jsp page to another JSP page
+redirect and Forward()
+final, finally fialize
+thread
+primary key , unique key
+GET,POST,PUT implemetation
+how will u call controller from JSP page
+write one method using Stream : 
+
+i wrote code as : List<String> names = names.stream().filter(name - > names.startsWith("A")).collect(Collectors.toList());
+
+then what is the size of company,name of product, what techonlogy u using
+method overloadig method overriding =>implementatio also
+
+404: RESOURCE NOT FOUND
+200: SUCCESS
+201: CREATED
+401: UNAUTHORIZED
+500: SERVER ERROR
+Forbidden : 403
+
+The Stream API in Java is a powerful feature introduced in Java 8 that allows you
+to process sequences of data (collections like lists, arrays, etc.) 
+in a functional and declarative manner. It provides a way to work with 
+collections and arrays by applying operations such as filtering, mapping,
+ reducing, and more in a concise and readable way.

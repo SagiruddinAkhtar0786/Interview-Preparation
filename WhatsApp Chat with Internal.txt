@@ -1,0 +1,1518 @@
+8/21/24, 2:15 PM - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+8/21/24, 2:15 PM - 18mcmc11 Abhishek Pathak created group "Internal"
+8/21/24, 2:15 PM - 18mcmc11 Abhishek Pathak added you
+8/21/24, 2:15 PM - 18mcmc11 Abhishek Pathak: Isme bhejna
+8/21/24, 2:38 PM - Quazi Mohammad Saad: Okay
+8/21/24, 2:57 PM - 18mcmc27 Abhinav Gautam: Spring boot 
+Maven
+8/21/24, 2:58 PM - 18mcmc27 Abhinav Gautam: Kon bolega
+8/21/24, 2:58 PM - 18mcmc27 Abhinav Gautam: Could platform
+8/21/24, 2:58 PM - 18mcmc27 Abhinav Gautam: Aws
+8/21/24, 2:58 PM - 18mcmc27 Abhinav Gautam: Itna stretch mat karo
+8/21/24, 2:59 PM - 18mcmc27 Abhinav Gautam: Java - 8 
+Spring Boot - 2.6
+Java
+8/21/24, 2:59 PM - 18mcmc27 Abhinav Gautam: Straight forward answer do
+8/21/24, 2:59 PM - 18mcmc11 Abhishek Pathak: Db versiond
+8/21/24, 2:59 PM - Quazi Mohammad Saad: *New Features in Spring Boot 3*
+
+Spring Boot 3 is a major release that introduces several new features and improvements, including ¹:
+
+- *Java 17 Baseline*: Spring Boot 3 requires Java 17 or higher, which means you can take advantage of the latest features and performance improvements that Java 17 offers.
+- *GraalVM Native Image Support*: Spring Boot 3 applications can now be converted into GraalVM native images, which can provide significant memory and startup performance improvements.
+- *Improved Observability*: Spring Boot 3 includes improved observability features with Micrometer and Micrometer Tracing, making it easier to monitor and troubleshoot applications.
+- *Jakarta EE 10 Support*: Spring Boot 3 includes support for Jakarta EE 10, which means you can now use Spring Boot to develop applications that are compliant with the Jakarta EE 10 specification.
+- *Spring Framework 6*: Spring Boot 3 is based on Spring Framework 6, which includes all of the new features and improvements that were introduced in Spring Framework 6.
+- *Web Flux Enhancements*: Spring Framework 6 provides new enhancements in the WebFlux Spring Module for reactive programming, including a new PartEvent API and support for Reactor Netty 2.
+- *Micrometer Metrics & Tracing Updates*: Spring Boot 3 includes two major updates introduced in Micrometer 1.10, including auto-configuration for Micrometer Observation API and Micrometer Tracing.
+- *Dependency Upgrades*: Spring Boot 3 includes upgrades to several dependencies, including Kotlin 1.7+, Lombok 1.18.22+, and Gradle 7.3+.
+- *Security Enhancements*: Spring Boot 3 includes several security-related updates, including the removal of WebSecurityConfigurerAdapter and the introduction of a more component-based approach to security configuration.
+8/21/24, 3:00 PM - 18mcmc27 Abhinav Gautam: Nhi
+8/21/24, 3:00 PM - 18mcmc27 Abhinav Gautam: Ye mat bolo
+8/21/24, 3:00 PM - 18mcmc27 Abhinav Gautam: Bre canaraBl
+8/21/24, 3:00 PM - 18mcmc27 Abhinav Gautam: Ye sab bolo jisme tum kam kiye ho
+8/21/24, 3:00 PM - 18mcmc27 Abhinav Gautam: Wo bolo
+8/21/24, 3:01 PM - Quazi Mohammad Saad: Microservices communicate with each other using various communication protocols and patterns. Here are some common ways microservices communicate:
+
+1. *RESTful APIs* (HTTP/JSON): Most common method, uses HTTP requests (GET, POST, PUT, DELETE) to communicate between services.
+
+2. *Message Queues* (e.g., RabbitMQ, Apache Kafka): Services send and receive messages asynchronously through message queues.
+
+3. *gRPC*: Remote Procedure Call (RPC) framework, uses Protocol Buffers (protobuf) for efficient communication.
+
+4. *GraphQL*: Query language for APIs, allows for flexible and efficient data retrieval.
+
+5. *WebSockets*: Enables real-time, bidirectional communication between services.
+
+6. *Event-driven architecture*: Services communicate through events, allowing for loose coupling and scalability.
+
+7. *API Gateways*: Acts as an entry point
+8/21/24, 3:01 PM - 18mcmc27 Abhinav Gautam: Two ways .
+
+
+Sysnchrounous call
+Ashyrounous call
+8/21/24, 3:02 PM - 18mcmc27 Abhinav Gautam: Yes we are authicating
+8/21/24, 3:02 PM - Quazi Mohammad Saad: When calling from Service A to Service B, authentication is crucial to ensure that only authorized services can communicate with each other. Here are some common ways to authenticate service-to-service communication:
+
+1. _API Keys_: Service A includes an API key in the request header, which Service B verifies to ensure authenticity.
+
+2. _OAuth 2.0 Client Credentials_: Service A uses client credentials (client ID and secret) to obtain an access token, which is then sent to Service B for verification.
+
+3. _JSON Web Tokens (JWT)_: Service A generates a JWT token, signed with a shared secret or private key, and sends it to Service B for verification.
+
+4. _Mutual TLS (mTLS)_: Service A and Service B establish a mutual TLS connection, ensuring both services authenticate each other's identities.
+
+5. _Service Accounts_: Service A uses a service account to authenticate with Service B, which verifies the account credentials.
+
+6. _OpenID Connect_: Service A uses OpenID Connect to authenticate with Service B, which verifies the identity token.
+
+7. _HMAC Signature_: Service A includes an HMAC signature in the request, which Service B verifies using a shared secret.
+
+8. _AWS Signature Version 4_: Used for authenticating requests to AWS services.
+
+Choose the authentication method that best fits your microservice architecture, considering factors like security, scalability, and ease of implementation.
+
+Remember to always validate and verify the authentication credentials or tokens to ensure secure communication between services!
+8/21/24, 3:03 PM - Quazi Mohammad Saad: JSON Web Tokens (JWT) is a popular method for authenticating and authorizing service-to-service communication. Here's a brief overview:
+
+*What is JWT?*
+
+JSON Web Tokens (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. It's digitally signed and contains a payload that can be verified and trusted.
+
+*How does JWT work?*
+
+1. *Header*: Service A generates a JWT token with a header containing the algorithm used for signing (e.g., HMAC SHA256).
+2. *Payload*: The payload contains the claims or data being transmitted (e.g., user ID, service name).
+3. *Signature*: The header and payload are signed with a shared secret or private key.
+4. *Token*: The resulting token is sent to Service B.
+5. *Verification*: Service B verifies the token's signature using the shared secret or public key.
+
+*Benefits of JWT*
+
+1
+8/21/24, 3:03 PM - 18mcmc27 Abhinav Gautam: Paylaod contains
+8/21/24, 3:03 PM - 18mcmc27 Abhinav Gautam: Name userid password
+8/21/24, 3:04 PM - 18mcmc27 Abhinav Gautam: JSON Web Tokens (JWT) is a popular method for authenticating and authorizing service-to-service communication. Here's a brief overview:
+
+*What is JWT?*
+
+JSON Web Tokens (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. It's digitally signed and contains a payload that can be verified and trusted.
+
+*How does JWT work?*
+
+1. *Header*: Service A generates a JWT token with a header containing the algorithm used for signing (e.g., HMAC SHA256).
+2. *Payload*: The payload contains the claims or data being transmitted (e.g., user ID, service name).
+3. *Signature*: The header and payload are signed with a shared secret or private key.
+4. *Token*: The resulting token is sent to Service B.
+5. *
+
+*Benefits of JWT*
+
+1
+8/21/24, 3:04 PM - 18mcmc27 Abhinav Gautam: Verification*: Service B verifies the token's signature using the shared secret or public key.
+8/21/24, 3:05 PM - 18mcmc27 Abhinav Gautam: Here are the dependencies required for implementing JWT in a Spring Boot application:
+
+- `io.jsonwebtoken:jjwt`: This is the main dependency for working with JWT in Java. It provides classes for creating, signing, verifying, and decoding JWTs.
+
+- `org.springframework.boot:spring-boot-starter-security`: This dependency provides the Spring Security framework, which is used to handle authentication and authorization in Spring Boot applications.
+
+- `org.springframework.boot:spring-boot-starter-web`: This dependency provides the Spring Web framework, which is used to handle HTTP requests and responses in Spring Boot applications.
+
+You can add these dependencies to your `pom.xml` file (if you're using Maven) or your `build.gradle` file (if you're using Gradle).
+
+Here's an example of what the dependencies might look like in a `pom.xml` file:
+
+```
+<dependencies>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.9.1</version>
+```
+8/21/24, 3:07 PM - 18mcmc27 Abhinav Gautam: Here are the dependencies for Spring Boot and JWT:
+
+Maven:
+
+- `io.jsonwebtoken:jjwt:0.9.1`
+- `org.springframework.boot:spring-boot-starter-security`
+- `org.springframework.boot:spring-boot-starter-web`
+
+Gradle:
+
+- `implementation 'io.jsonwebtoken:jjwt:0.9.1'`
+- `implementation 'org.springframework.boot:spring-boot-starter-security'`
+- `implementation 'org.springframework.boot:spring-boot-starter-web'`
+8/21/24, 3:07 PM - 18mcmc27 Abhinav Gautam: Here are some common design patterns in brief, point-wise notes:
+
+*Creational Patterns:*
+
+1. Singleton: Ensure a class has only one instance.
+2. Factory Method: Create objects without specifying classes.
+3. Abstract Factory: Create families of related objects.
+4. Builder: Separate object construction from representation.
+5. Prototype: Clone objects instead of creating new ones.
+
+*Structural Patterns:*
+
+1. Adapter: Convert one interface to another.
+2. Bridge: Separate abstraction from implementation.
+3. Composite: Treat individual objects as a group.
+4. Decorator: Add responsibilities to objects dynamically.
+5. Facade: Simplify complex systems with a single interface.
+
+*Behavioral Patterns:*
+
+1. Interpreter: Execute expressions or commands.
+2. Iterator: Access elements without exposing underlying structure.
+8/21/24, 3:07 PM - Quazi Mohammad Saad: The Singleton design pattern is a creational pattern that ensures a class has only one instance and provides a global point of access to that instance.
+
+_Key characteristics:_
+
+1. _Single instance_: Only one instance of the class is created.
+2. _Global access_: The instance is accessible globally through a static method.
+3. _Lazy initialization_: The instance is created only when needed.
+
+_Implementation steps:_
+
+1. Make the constructor private to prevent external instantiation.
+2. Create a private static instance variable to hold the single instance.
+3. Create a public static method (e.g., getInstance()) to provide global access.
+4. Initialize the instance variable lazily, only when getInstance() is called.
+
+_Example in Java:_
+```
+public class Singleton {
+    private static Singleton instance;
+    private Singleton() {}
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+```
+_Benefits:_
+
+1. _Memory efficiency_: Only one instance is created, reducing memory usage.
+2. _Global access_: Easy access to
+8/21/24, 3:08 PM - 18mcmc27 Abhinav Gautam: Example
+8/21/24, 3:08 PM - 18mcmc27 Abhinav Gautam: Configuration
+8/21/24, 3:08 PM - Quazi Mohammad Saad: Logger
+8/21/24, 3:08 PM - Quazi Mohammad Saad: Db configuration
+8/21/24, 3:09 PM - 18mcmc27 Abhinav Gautam: In spring frame work where is singleton pattern
+8/21/24, 3:09 PM - Quazi Mohammad Saad: In a Spring application, the Singleton design pattern is used in several ways:
+
+1. _Bean Scopes_: Spring's singleton scope ensures that only one instance of a bean is created, and it's shared across the application.
+
+2. _Autowired Components_: Spring's autowiring mechanism uses singleton instances of components, such as services and repositories, to inject dependencies.
+
+3. _Spring Boot's Application Context_: The Spring Boot application context is a singleton instance that manages the entire application's lifecycle.
+
+4. _Caching_: Spring's caching mechanism uses singleton instances of cache managers to store and retrieve cached data.
+
+5. _Database Connections_: Spring's DataSource bean is often configured as a singleton to manage database connections.
+
+6. _Logging_: Logging frameworks like Logback and Log4j use singleton instances to manage loggers.
+
+7. _Spring Security_: Spring Security's AuthenticationManager and UserDetailsService are often configured as singletons.
+
+8. _Spring Cloud's Configuration_: Spring Cloud's Config Server uses a singleton instance to manage configuration properties.
+
+By using the Singleton pattern, Spring ensures efficient memory usage, easy access to shared resources, and simplified application management.
+
+However, be cautious when implementing singletons in Spring, as they can lead to tight coupling and testing difficulties. Consider using alternative patterns, like Dependency Injection, for more flexibility and maintainability.
+8/21/24, 3:09 PM - Quazi Mohammad Saad: An API Gateway is a crucial component in modern software architecture, acting as an entry point for client requests and providing a layer of abstraction between clients and microservices. Here are some key uses of an API Gateway:
+
+1. _Unified Entry Point_: Provides a single entry point for clients, making it easier to manage and secure access to microservices.
+
+2. _Route Management_: Routes client requests to the appropriate microservice, allowing for flexible routing and load balancing.
+
+3. _Authentication and Authorization_: Handles authentication and authorization, ensuring only authorized clients can access microservices.
+
+4. _Rate Limiting and Quotas_: Enforces rate limits and quotas to prevent abuse and ensure fair usage of microservices.
+
+5. _Caching_: Caches responses from microservices, reducing the load on services and improving response times.
+
+6. _API Composition_: Allows for API composition, enabling clients to request data from multiple microservices in a single call.
+
+7. _Protocol Translation_: Translates between different protocols (e.g., HTTP to gRPC), enabling communication between clients and microservices using different protocols.
+
+8. _Security_: Provides security features like SSL termination, OAuth, and JWT validation to ensure secure communication.
+
+9. _Monitoring and Analytics_: Collects metrics and logs, providing insights into API usage and performance.
+
+10. _Version Management_: Manages multiple versions of APIs, allowing for smooth transitions and backward compatibility.
+
+By using
+8/21/24, 3:09 PM - Quazi Mohammad Saad: The Proxy design pattern is a structural pattern that provides a surrogate or placeholder object that controls access to the original object, allowing for additional functionality, security, or logging.
+
+Types of Proxy patterns:
+
+1. *Virtual Proxy*: Delays the creation of an expensive object until it's actually needed.
+2. *Protection Proxy*: Controls access to an object based on certain criteria, like permissions or security.
+3. *Remote Proxy*: Provides a local representation of an object that resides in a different location or server.
+4. *Cache Proxy*: Improves performance by caching frequently accessed data.
+5. *Logging Proxy*: Logs requests or actions performed on the original object.
+
+Benefits:
+
+1. *Flexibility*: Allows for additional functionality without modifying the original object.
+2. *Security*: Controls access to sensitive data or functionality.
+3. *Performance*: Improves performance by caching or delaying object creation.
+4. *Simplification*: Provides a simpler interface to a complex object.
+
+Common use cases:
+
+1. *Image loading*: Using a virtual
+8/21/24, 3:10 PM - 18mcmc27 Abhinav Gautam: The Proxy design pattern is a structural pattern that provides an object that acts as a substitute for a real object, controlling access to it or adding additional functionality. It allows for:
+
+1. *Lazy loading*: Delaying the creation of an object until it's needed.
+2. *Access control*: Restricting access to the real object based on certain conditions.
+3. *Caching*: Storing the results of expensive operations to avoid repeating them.
+4. *Logging*: Adding logging or monitoring functionality to the real object.
+5. *Virtual proxy*: Creating a placeholder object that loads the real object on demand.
+
+Types of Proxy patterns:
+
+1. *Virtual Proxy*: Loads the real object on demand.
+2. *Protection Proxy*: Controls access to the real object.
+3. *Remote Proxy*: Provides a local representation of a remote object.
+4. *Cache Proxy*: Caches
+8/21/24, 3:10 PM - Quazi Mohammad Saad: The Saga design pattern is a behavioral pattern that helps manage complex, distributed transactions across multiple services or microservices. It ensures consistency and reliability by coordinating and compensating for failures.
+
+Key components:
+
+1. _Saga_: A sequence of local transactions, each executed by a different service.
+2. _Saga Orchestrator_: Coordinates the saga, ensuring all local transactions are executed correctly.
+3. _Compensating Actions_: Undo operations performed by local transactions in case of failure.
+
+How it works:
+
+1. _Start_: The saga orchestrator initiates the saga.
+2. _Local Transactions_: Each service executes its local transaction.
+3. _Success_: If all local transactions succeed, the saga completes successfully.
+4. _Failure_: If
+8/21/24, 3:10 PM - 18mcmc27 Abhinav Gautam: The Saga design pattern is a behavioral pattern that manages long-running, distributed transactions across multiple services or systems. It ensures data consistency and handles failures by:
+
+1. _Breaking down transactions into smaller steps_
+2. _Using compensating actions to undo changes_
+3. _Coordinating steps across services_
+
+Key components:
+
+1. _Saga orchestrator_: Manages the transaction flow
+2. _Saga participants_: Perform individual steps
+3. _Compensating actions_: Undo changes in case of failure
+
+Benefits:
+
+1. _Maintains data consistency_
+2. _Handles failures and exceptions_
+3. _Improves fault tolerance_
+4. _Simplifies distributed transactions_
+
+Example: A purchase order saga that involves multiple services (inventory, payment, shipping) and uses compensating actions to cancel orders if any step fails.
+8/21/24, 3:12 PM - 18mcmc27 Abhinav Gautam: Here's a small example of a Saga pattern implementation in Java:
+
+```
+// Saga orchestrator
+public class PurchaseOrderSaga {
+    public void process(PurchaseOrder order) {
+        try {
+            // Step 1: Reserve inventory
+            InventoryService.reserve(order.getProductId(), order.getQuantity());
+            
+            // Step 2: Process payment
+            PaymentService.processPayment(order.getOrderId(), order.getTotal());
+            
+            // Step 3: Ship order
+            ShippingService.shipOrder(order.getOrderId(), order.getAddress());
+        } catch (Exception e) {
+            // Compensating actions
+            compensate(order);
+        }
+    }
+    
+    private void compensate(PurchaseOrder order) {
+        try {
+            // Undo step 1: Release inventory
+            InventoryService.release(order.getProductId(), order.getQuantity());
+            
+            // Undo step 2: Refund payment
+            PaymentService.refundPayment(order.getOrderId(), order.getTotal());
+        } catch (Exception e) {
+            // Log or handle compensation failure
+        }
+    }
+}
+
+// Saga participants (services)
+public interface InventoryService {
+    void reserve(String productId, int quantity);
+    void release(String productId, int quantity);
+}
+
+public interface PaymentService {
+    void processPayment(String orderId, double total);
+    void refundPayment(String orderId, double total);
+}
+
+public interface ShippingService {
+    void shipOrder(String orderId, String address);
+}
+```
+
+This example demonstrates a basic Saga pattern flow, where the `PurchaseOrderSaga` orchestrator manages the transaction across multiple services (Inventory, Payment, Shipping). If any step fails, the compensating actions are executed to undo the changes.
+8/21/24, 3:14 PM - 18mcmc27 Abhinav Gautam: To avoid data loss and ensure successful data processing in a distributed system with two services (Service A and Service B), where Service B stores data to a database, follow these steps:
+
+1. *Implement Transactional Behavior*:
+    - Use database transactions to ensure atomicity. If any part of the transaction fails, the entire transaction is rolled back, maintaining data consistency.
+2. *Use Message Queues or Event Sourcing*:
+    - Service A sends a message to a message queue (e.g., RabbitMQ, Apache Kafka) instead of directly calling Service B.
+    - Service B consumes messages from the queue, processes data, and stores it in the database.
+    - If processing fails, the message remains in the queue, allowing for retries.
+3. *Implement Retries with Exponential Backoff*
+8/21/24, 3:14 PM - 18mcmc27 Abhinav Gautam: To avoid data loss and ensure successful data processing in a distributed system with two services (Service A and Service B), where Service B stores data to a database, follow these steps:
+
+1. *Implement Transactional Behavior*:
+    - Use database transactions to ensure atomicity. If any part of the transaction fails, the entire transaction is rolled back, maintaining data consistency.
+2. *Use Message Queues or Event Sourcing*:
+    - Service A sends a message to a message queue (e.g., RabbitMQ, Apache Kafka) instead of directly calling Service B.
+    - Service B consumes messages from the queue, processes data, and stores it in the database.
+    - If processing fails, the message remains in the queue, allowing for retries.
+3. *Implement Retries with Exponential Backoff*:
+    - Service B retries failed operations with increasing delays (e.g., 1 second, 2 seconds, 4 seconds, etc.) to avoid overwhelming the database.
+4. *Use Idempotence*:
+    - Design Service B's operations to be idempotent, meaning that retrying a failed operation won't cause data inconsistencies.
+5. *Implement Circuit Breakers*:
+    - Service A uses a circuit breaker to detect when Service B is experiencing issues and temporarily stops sending requests to prevent overwhelming the failed service.
+6. *Monitor and Alert*:
+    - Set up monitoring and alerting mechanisms to detect failures and notify teams for prompt action.
+7. *Data Validation and Sanitization*:
+    - Validate and sanitize data in Service A before sending it to Service B to prevent malformed data from causing issues.
+8. *Database Connection Pooling*:
+    - Use connection pooling to manage database connections efficiently and prevent connection exhaustion.
+9. *Service B's Error Handling*:
+    - Implement robust error handling in Service B to catch and handle exceptions, logging errors for later analysis.
+10. *Regular Maintenance and Testing*:
+- Regularly test and maintain both services to ensure they function correctly and can handle failures gracefully.
+
+By implementing these strategies, you can minimize data loss and ensure successful data processing even in the face of failures.
+8/21/24, 3:15 PM - 18mcmc27 Abhinav Gautam: Circut braker
+8/21/24, 3:18 PM - 18mcmc27 Abhinav Gautam: To make traction successful, focus on the following key areas:
+
+1. *Clear Direction*: Establish a well-defined vision, mission, and objectives.
+2. *Strong Leadership*: Appoint a dedicated leader to drive the effort.
+3. *Effective Communication*: Foster open, transparent, and regular communication.
+4. *Stakeholder Engagement*: Ensure all stakeholders are informed, involved, and committed.
+5. *Process Optimization*: Streamline processes to reduce friction and increase efficiency.
+6. *Technology Enablement*: Leverage technology to automate and enhance efforts.
+7. *Data-Driven Decision Making*: Use data to inform decisions and measure progress.
+8. *Continuous Improvement*: Regularly assess and improve the effort.
+9. *Team Empowerment*: Empower teams to take ownership and make decisions.
+10. *Celebrate Successes*: Recognize and celebrate achievements to maintain momentum.
+11. *Address Resistance*: Identify and address resistance to change.
+12. *Monitor Progress*: Regularly track and report progress.
+13. *Adapt to Change*: Be flexible and adapt to changing circumstances.
+14. *Provide Training*: Offer training and support to ensure teams have necessary skills.
+15. *Lead by Example*: Leaders should model the behavior they expect from others.
+
+Additionally, consider:
+
+- Setting realistic timelines and milestones
+- Establishing a feedback loop
+- Fostering a culture of innovation and experimentation
+- Encouraging collaboration and teamwork
+- Providing necessary resources and support
+- Celebrating small wins along the way
+
+By focusing on these areas, you can increase the chances of making traction successful and achieving your desired outcomes.
+8/21/24, 3:18 PM - Quazi Mohammad Saad: Global exception handling involves catching and managing exceptions at the application level, rather than in individual methods or classes. Here are some ways to handle exceptions globally:
+
+1. *Try-Catch Blocks*: Wrap your application's entry point (e.g., main method) in a try-catch block to catch any unhandled exceptions.
+
+2. *Exception Filters*: Use exception filters to catch specific exceptions and handle them globally.
+
+3. *Global Exception Handlers*: Implement global exception handlers using frameworks like Spring, ASP.NET Core, or Node.js.
+
+4. *Error Handling Middlewares*: Use error handling middlewares in frameworks like Express.js or ASP.NET Core.
+
+5. *AOP (Aspect-Oriented Programming)*: Use AOP to intercept and handle exceptions globally.
+
+6. *Centralized Error Handling*: Create a centralized error handling mechanism to log, notify, and handle exceptions.
+
+Benefits:
+
+1. *Unified Error Handling*: Handle exceptions consistently across the application.
+2. *Reduced Code Duplication*: Avoid duplicating error handling code in multiple places.
+3. *Improved Error Reporting*: Get detailed error reports and logs for better debugging.
+4. *Enhanced User Experience*: Provide user-friendly error messages and handling.
+
+Example in Java (using Spring):
+```
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String
+```
+8/21/24, 3:19 PM - Quazi Mohammad Saad: @cobtrolleradvice
+@exceptionhandler
+8/21/24, 3:19 PM - 18mcmc27 Abhinav Gautam: Here is a Java-specific example of a global exception handler:
+
+```
+import java.lang.Thread.UncaughtExceptionHandler;
+
+public class GlobalExceptionHandler implements UncaughtExceptionHandler {
+    @Override
+    public void uncaughtException(Thread t, Throwable e) {
+        // Log the exception
+        Logger.error("Uncaught exception:", e);
+        
+        // Display a friendly error message
+        System.out.println("An unexpected error occurred.");
+    }
+}
+
+// Set the global exception handler
+Thread.setDefaultUncaughtExceptionHandler(new GlobalExceptionHandler());
+```
+
+Alternatively, if you're using Spring, you can use the `@ControllerAdvice` annotation to create a global exception handler:
+
+```
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(Exception.class)
+    public void handleException(Exception e) {
+        // Log the exception
+        Logger.error("Exception:", e);
+        
+        // Display a friendly error message
+        System.out.println("An unexpected error occurred.");
+    }
+}
+```
+
+This will catch any unhandled exceptions that occur in your Spring application and handle them accordingly.
+8/21/24, 3:19 PM - Quazi Mohammad Saad: `@ControllerAdvice` and `@ExceptionHandler` are annotations in Spring Framework that help handle exceptions globally.
+
+`@ControllerAdvice`:
+
+- A specialization of the `@Component` annotation that allows you to handle exceptions across the entire application, not just in a single controller.
+- Enables global exception handling, data binding, and response body advice.
+
+`@ExceptionHandler`:
+
+- Used in conjunction with `@ControllerAdvice` to specify the exceptions you want to handle.
+- Defines the method that will handle the exception.
+
+Example:
+```
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<String> handleException(Exception e) {
+        // Log and handle exception
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred");
+    }
+}
+```
+In this example, the `GlobalExceptionHandler` class handles all exceptions (`Exception.class`) and returns a unified error response.
+
+Benefits:
+
+- Global exception handling
+- Reduced code duplication
+- Improved error reporting
+- Enhanced user
+8/21/24, 3:20 PM - Quazi Mohammad Saad: Spring Boot is a popular choice for building applications due to its unique benefits. Here are some reasons why developers prefer Spring Boot over others:
+
+1. *Easy Setup*: Spring Boot simplifies the setup process with its convention-over-configuration approach, reducing the need for extensive configuration.
+
+2. *Auto-Configuration*: Automatically configures your application based on the dependencies you added, making it easier to get started.
+
+3. *Standalone*: Spring Boot applications are standalone, meaning they don't require an external web server or application server.
+
+4. *Embedded Servers*: Comes with embedded servers like Tomcat, Jetty, or Undertow, making it easy to deploy and run applications.
+
+5. *Production-Ready Features*: Includes production-ready features like metrics, health checks, and externalized configuration.
+
+6. *Extensive Community*: Spring Boot has a massive community, ensuring extensive documentation, tutorials, and support.
+
+7. *Flexibility*: Supports a wide range of databases, messaging systems, and cloud services.
+
+8. *Rapid Development*: Enables rapid development with its opinionated approach and extensive auto-configuration.
+
+9. *Testing*: Provides excellent support for testing, including integration testing and unit testing.
+
+10. *Security*: Offers robust security features, including OAuth2 and SSL support.
+
+While other frameworks like Node.js, Django, or Flask have their strengths, Spring Boot's unique combination of ease, flexibility, and production-ready features make it a popular choice for building enterprise-level applications.
+
+When to choose Spring Boot:
+
+- Building complex, scalable enterprise applications
+- Needing robust security features
+- Requiring extensive testing and monitoring capabilities
+- Preferring a convention-over-configuration approach
+- Working with Java or Kotlin programming languages
+
+Remember, the choice ultimately depends on your project's specific needs and your team's expertise.
+8/21/24, 3:20 PM - 18mcmc27 Abhinav Gautam: Spring and Spring Boot are both popular Java frameworks for building enterprise-level applications, but they serve different purposes and have different characteristics:
+
+*Spring:*
+
+1. _Comprehensive framework_: Provides a wide range of features and tools for building complex applications.
+2. _Flexible and customizable_: Allows for fine-grained control over configuration and behavior.
+3. _Requires manual configuration_: Needs explicit configuration for setting up and integrating components.
+4. _Standalone framework_: Can be used with or without other frameworks and libraries.
+
+*Spring Boot:*
+
+1. _Opinionated framework_: Provides a streamlined and simplified approach for building applications.
+2. _Conventions over configuration_: Automatically configures and sets up components based on conventions.
+3. _Starter dependencies_: Includes pre-configured dependencies for common use cases.
+4. _Production-ready_: Includes features like metrics, health checks, and externalized configuration.
+
+In summary:
+8/21/24, 3:20 PM - 18mcmc27 Abhinav Gautam: Configuration
+8/21/24, 3:21 PM - 18mcmc27 Abhinav Gautam: Is very easy
+8/21/24, 3:21 PM - Quazi Mohammad Saad: Easy setup
+Auto configuration 
+Embedded server 
+Production ready features
+Flexibility rapid development 
+Testing 
+Security
+8/21/24, 3:22 PM - Quazi Mohammad Saad: Transitive dependency refers to a dependency that is required by another dependency. In other words, if project A depends on project B, and project B depends on project C, then project A has a transitive dependency on project C.
+
+Here's an example:
+
+Project A (depends on) -> Project B (depends on) -> Project C
+
+In this case, Project A has a direct dependency on Project B and a transitive dependency on Project C.
+
+Transitive dependencies can be beneficial, as they allow projects to indirectly use functionality from other projects without having to explicitly declare those dependencies. However, they can also lead to issues like:
+
+1. _Dependency conflicts_: When two or more dependencies require different versions of the same transitive dependency.
+2. _Dependency hell_: When a project has many transitive dependencies,
+8/21/24, 3:22 PM - Quazi Mohammad Saad: <Media omitted>
+8/21/24, 3:23 PM - Quazi Mohammad Saad: To remove a transitive dependency, follow these steps:
+
+1. *Identify the transitive dependency*: Use tools like Maven, Gradle, or npm to analyze your project's dependency graph and identify the transitive dependency you want to remove.
+
+2. *Declare the dependency explicitly*: Add the transitive dependency as a direct dependency in your project's configuration file (e.g., pom.xml, build.gradle, or package.json).
+
+3. *Exclude the transitive dependency*: Use the "exclude" feature in your dependency management tool to exclude the transitive dependency from the direct dependency.
+
+Example in Maven:
+```
+<dependency>
+    <groupId>com.example</groupId>
+    <artifactId>project-b</artifactId>
+    <version>1.0</version>
+    <exclusions>
+        <exclusion>
+            <groupId>com.example</groupId>
+            <artifactId>project-c</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+Example in Gradle:
+```
+dependencies {
+    implementation('com.example:project-b:1.0') {
+        exclude group: 'com.example', module: 'project-c'
+    }
+}
+```
+Example in npm:
+```
+"dependencies": {
+    "project-b":
+```
+8/21/24, 3:23 PM - Quazi Mohammad Saad: Iska heading pdho
+8/21/24, 3:24 PM - Quazi Mohammad Saad: `@SpringBootApplication` is a convenient annotation in Spring Boot that enables auto-configuration, component scanning, and Spring Boot's default configuration. It's a combination of three annotations:
+
+1. `@Configuration`: Enables Spring's annotation-based configuration.
+2. `@EnableAutoConfiguration`: Enables Spring Boot's auto-configuration mechanism.
+3. `@ComponentScan`: Enables component scanning, allowing Spring to automatically discover and register beans.
+
+Using `@SpringBootApplication` on your main application class (usually the class with the `public static void main(String[] args)` method) enables the following features:
+
+- Auto-configuration of Spring Boot's default settings
+- Component scanning for beans and configurations
+- Spring Boot's default configuration, such as logging, security, and data source settings
+
+Example:
+```
+@SpringBootApplication
+public class MyApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+```
+By using `@SpringBootApplication`, you can quickly set up a Spring Boot application with minimal configuration. However, you can also customize the configuration by adding additional annotations or modifying the application properties file (application.properties or application.yml).
+8/21/24, 3:25 PM - Quazi Mohammad Saad: <Media omitted>
+8/21/24, 3:26 PM - Quazi Mohammad Saad: To inject configurations from external sources, such as a repository, into your Spring Boot application, you can use the following approaches:
+
+1. *@PropertySource*: Load properties from a file or repository using the `@PropertySource` annotation.
+
+Example:
+```
+@PropertySource("classpath:config.properties")
+```
+1. *@ConfigurationProperties*: Map properties from a file or repository to a Java bean using the `@ConfigurationProperties` annotation.
+
+Example:
+```
+@ConfigurationProperties(prefix = "my.config")
+public class MyConfig {
+    private String property1;
+    private String property2;
+    // Getters and setters
+}
+```
+1. *Environment Variables*: Use environment variables to inject configurations into your application.
+
+Example:
+```
+@Value("${MY_PROPERTY}")
+private String myProperty;
+```
+1. *External Configuration Files*: Use external configuration files, such as YAML or properties files, and load them into your application using the `@Configuration`
+8/21/24, 3:28 PM - Quazi Mohammad Saad: To read application configurations from a separate server, you can use the following approaches:
+
+1. *Spring Cloud Config*: Use Spring Cloud Config to manage configurations in a centralized repository, such as Git. Your application can then fetch configurations from the Config Server.
+
+Example:
+```
+@Value("${config.server.uri}")
+private String configServerUri;
+
+RestTemplate restTemplate = new RestTemplate();
+String response = restTemplate.getForObject(configServerUri + "/config", String.class);
+```
+1. *HTTP Request*: Make an HTTP request to the configuration server to retrieve configurations.
+
+Example:
+```
+RestTemplate restTemplate = new RestTemplate();
+String response = restTemplate.getForObject("http://config-server/config", String.class);
+```
+1. *Configuration API*: Create a REST API on the configuration server to expose configurations. Your application can then consume this API to retrieve configurations.
+
+Example:
+```
+RestTemplate restTemplate = new RestTemplate();
+Config config = restTemplate.getForObject("http://config-server/api/config", Config.class);
+```
+1. *Message Queue*: Use a message queue like RabbitMQ or Apache Kafka to publish configurations from the configuration server. Your application can then consume these messages to retrieve configurations.
+
+Example:
+```
+@RabbitListener(queues = "config.queue")
+public void receiveConfig(Config config) {
+    // Process configuration
+}
+```
+1. *Database*: Store configurations in a database and have your application query the database to retrieve configurations.
+
+Example:
+```
+JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+Config config = jdbcTemplate.queryForObject("SELECT * FROM config", Config.class);
+```
+By using these approaches, you can read application configurations from a separate server and use them in your application.
+8/21/24, 3:29 PM - Quazi Mohammad Saad: To read the `application.yml` file in your Spring Boot application, you can use the following approaches:
+
+1. *@Value* annotation:
+
+Use the `@Value` annotation to inject values from the `application.yml` file into your application.
+
+Example:
+```
+@Value("${property.name}")
+private String propertyName;
+```
+1. *@ConfigurationProperties* annotation:
+
+Use the `@ConfigurationProperties` annotation to bind the entire `application.yml` file to a Java bean.
+
+Example:
+```
+@ConfigurationProperties(prefix = "my.config")
+public class MyConfig {
+    private String property1;
+    private String property2;
+    // Getters and setters
+}
+```
+1. *YamlPropertySourceFactory*:
+
+Use the `YamlPropertySourceFactory` class to load the `application.yml` file as a property source.
+
+Example:
+```
+@Bean
+public PropertySource yamlPropertySource() {
+    YamlPropertySourceFactory factory = new YamlPropertySourceFactory();
+    return factory.createPropertySource("application.yml");
+}
+```
+1. *Environment* object:
+
+Use the `Environment` object to access properties from the `application.yml` file.
+
+Example:
+```
+@Autowired
+private Environment environment;
+
+public void myMethod() {
+    String propertyName = environment.getProperty("property.name");
+}
+```
+1. *@PropertySource* annotation:
+
+Use the
+8/21/24, 3:29 PM - Quazi Mohammad Saad: @value
+8/21/24, 3:31 PM - Quazi Mohammad Saad: `application.properties` and `bootstrap.yml` are both configuration files used in Spring Boot applications, but they serve different purposes:
+
+`application.properties`:
+
+1. Used for application-specific configurations.
+2. Loaded after the application context is created.
+3. Can be overridden by command-line arguments or environment variables.
+4. Typically used for configurations that can be changed at runtime.
+
+Example:
+```
+server.port=8080
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+```
+`bootstrap.yml` (or `bootstrap.properties`):
+
+1. Used for bootstrap configurations, such as configuring the application context.
+2. Loaded before the application context is created.
+3. Cannot be overridden by command-line arguments or environment variables.
+4. Typically used for configurations that need to be set before the application starts.
+
+Example:
+```
+spring:
+  application:
+    name: my-application
+  cloud:
+    config:
+      uri: http://localhost:8888
+```
+Key differences:
+
+- Loading order: `bootstrap.yml` is loaded before `application.properties`.
+- Override behavior: `application.properties` can be overridden, while `bootstrap.yml` cannot.
+- Purpose: `bootstrap.yml` is for bootstrap configurations, while `application.properties` is for application-specific configurations.
+
+When to use each:
+
+- Use `bootstrap.yml
+8/21/24, 3:32 PM - Quazi Mohammad Saad: @profile
+8/21/24, 3:32 PM - Quazi Mohammad Saad: Annotations
+8/21/24, 3:32 PM - Quazi Mohammad Saad: Yahan bhejna hai
+8/21/24, 3:33 PM - 18mcmc27 Abhinav Gautam: To run a Java application in the terminal, use the following command:
+
+`java -jar <filename>.jar`
+
+or
+
+`java <classname>`
+
+Replace `<filename>.jar` with the name of your Java archive (JAR) file or `<classname>` with the name of your Java class.
+
+For example:
+
+`java -jar MyApplication.jar`
+
+or
+
+`java com.example.MyClass`
+
+If your Java application requires arguments, add them after the class name:
+
+`java com.example.MyClass <arg1> <arg2>`
+
+Note:
+
+- Make sure you're in the directory where your JAR file or class file is located.
+- Ensure that the Java Runtime Environment (JRE) is installed and configured on your system.
+- If you're running a Java class, ensure that the classpath is set correctly. You can do this by adding the `-cp` or `-classpath` option followed by the classpath. For example:
+
+`java -cp /path/to/classes com.example.MyClass`
+8/21/24, 3:35 PM - Quazi Mohammad Saad: The default connection pool in Spring Boot depends on the database driver and configuration. Here are some common default connection pools:
+
+- *Tomcat JDBC Connection Pool*: This is the default connection pool for Spring Boot when using Tomcat as the embedded servlet container.
+- *HikariCP*: This is the default connection pool for Spring Boot when using HikariCP as the connection pool library.
+- *DBCP2*: This is the default connection pool for Spring Boot when using Apache Commons DBCP2 as the connection pool library.
+
+The default connection pool settings can be overridden by configuring the following properties in the `application.properties` or `application.yml` file:
+
+- *spring.datasource.url*: The database URL.
+- *spring.datasource.username*: The database username.
+- *spring.datasource.password*: The database password.
+- *spring.datasource.driver-class-name*: The database driver class name.
+- *spring.datasource.type*: The connection pool type (e.g., com.zaxxer.hikari.HikariDataSource).
+- *spring.datasource.maximum-pool-size*: The maximum number of connections in the pool.
+- *spring.datasource.minimum-idle*: The minimum number of idle connections in the pool.
+
+For example:
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=myuser
+spring.datasource.password=mypassword
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+spring.datasource.maximum-pool-size=10
+spring.datasource.minimum-idle=5
+```
+Note: The exact properties may vary depending on the connection pool library and database driver being used.
+8/21/24, 3:35 PM - 18mcmc27 Abhinav Gautam: In Spring, the default connection pool is Apache Commons DBCP2 (Database Connection Pooling). However, Spring Boot uses HikariCP as the default connection pool.
+
+Here's a brief comparison:
+
+_Apache Commons DBCP2:_
+
+1. Older and widely used connection pool
+2. Supports various databases
+3. Configurable via Spring properties
+
+_HikariCP:_
+
+1. Modern and high-performance connection pool
+2. Optimized for production environments
+3. Automatic configuration in Spring Boot
+
+To use HikariCP in Spring (non-Boot), add the following dependency:
+
+```
+<dependency>
+    <groupId>com.zaxxer</groupId>
+    <artifactId>HikariCP</artifactId>
+</dependency>
+```
+
+In Spring Boot, HikariCP is included by default. You can configure it using properties like `spring.datasource.url`, `spring.datasource.username`, etc.
+
+Remember to configure your connection pool according to your application's needs and database requirements.
+8/21/24, 3:35 PM - 18mcmc27 Abhinav Gautam: When application will run
+8/21/24, 3:35 PM - 18mcmc27 Abhinav Gautam: It will establish
+8/21/24, 3:36 PM - 18mcmc27 Abhinav Gautam: Connecttion to dbtaa
+8/21/24, 3:36 PM - Quazi Mohammad Saad: Improperly formatted text:
+
+`@RestController` vs `@Controller`:
+
+`@RestController`:
+
+- Indicates a controller that handles REST requests
+- Implies `@ResponseBody` on every method
+- Returns data in a format like JSON or XML
+- Used for API endpoints
+
+`@Controller`:
+
+- Indicates a controller that handles requests
+- Does not imply `@ResponseBody` on every method
+- Can return views, data, or other types of responses
+- Used for web applications
+
+Key differences:
+
+- `@RestController` is for RESTful APIs, while `@Controller` is for web applications
+- `@RestController` implies `@ResponseBody`, while `@Controller` does not
+
+When to use each:
+
+- Use `@RestController` for API endpoints that return data in a format like JSON or XML
+- Use `@Controller` for web applications that return views or other types of responses
+
+Example:
+```
+@RestController
+public class MyRestController {
+    @GetMapping("/api/data")
+    public MyData getData() {
+        return myData;
+    }
+}
+
+@Controller
+public class MyController {
+    @GetMapping("/home")
+    public String getHomeView() {
+        return "home";
+    }
+}
+```
+8/21/24, 3:36 PM - 18mcmc27 Abhinav Gautam: The main difference between `@RestController` and `@Controller` in Spring is the way they handle HTTP requests and responses:
+
+`@Controller`:
+
+1. Handles HTTP requests and returns a view or a model and view.
+2. Typically used for web applications where you need to render a view (e.g., JSP, Thymeleaf).
+3. Returns a `String` or a `ModelAndView` object.
+
+`@RestController`:
+
+1. Handles HTTP requests and returns a response body (e.g., JSON, XML).
+2. Typically used for RESTful web services where you need to return data in a specific format.
+3. Returns a domain object or a collection of domain objects.
+
+In summary:
+
+- Use `@Controller` for web applications with views.
+- Use `@RestController` for RESTful web services with response bodies.
+
+Here's an example:
+
+`@Controller`:
+```
+@Controller
+public class MyController {
+    @GetMapping("/users
+```
+8/21/24, 3:37 PM - Quazi Mohammad Saad: `@ResponseBody` vs `ResponseEntity`:
+
+`@ResponseBody`:
+
+- Indicates that the return value of a method should be written to the response body
+- Returns the response body only
+- No control over HTTP status code or headers
+
+`ResponseEntity`:
+
+- Represents the entire HTTP response, including the response body, status code, and headers
+- Allows for more control over the response, such as setting the status code or adding headers
+- Can be used to return a response with a specific status code or headers
+
+Key differences:
+
+- `@ResponseBody` returns only the response body, while `ResponseEntity` returns the entire response
+- `ResponseEntity` provides more control over the response, while `@ResponseBody` does not
+
+When to use each:
+
+- Use `@ResponseBody` when you only need to return a response body, and the default status code (200 OK) is sufficient
+- Use `ResponseEntity` when you need more control over the response, such as setting a specific status code or adding headers
+
+Example:
+```
+@GetMapping("/data")
+@ResponseBody
+public MyData getData() {
+    return myData;
+}
+
+@GetMapping("/data-with-status")
+public ResponseEntity<MyData> getDataWithStatus() {
+    return ResponseEntity.status(201).body
+```
+8/21/24, 3:37 PM - 18mcmc27 Abhinav Gautam: `@ResponseBody` and `@ResponseEntity` are two annotations in Spring that help control the HTTP response:
+
+`@ResponseBody`:
+
+1. Indicates that the return value of a method should be written to the HTTP response body.
+2. Typically used for methods that return a domain object or a collection of domain objects.
+3. The response body is written using
+8/21/24, 3:38 PM - 18mcmc27 Abhinav Gautam: Entire resource
+8/21/24, 3:38 PM - Quazi Mohammad Saad: The main difference between PUT and PATCH requests is the way they update resources:
+
+PUT:
+
+- Replaces the entire resource with a new version
+- Requires the client to send the full resource representation
+- Overwrites all existing data, including attributes not included in the request
+- Idempotent (making the same request multiple times has the same effect as making it once)
+
+PATCH:
+
+- Updates only the specified attributes of the resource
+- Allows the client to send only the changes, rather than the full resource representation
+- Preserves existing data not included in the request
+- Non-idempotent (making the same request multiple times can have different effects)
+
+In summary:
+
+- Use PUT to replace a resource entirely
+- Use PATCH to update specific attributes of a resource
+
+Example:
+
+- PUT /users/1 (replace the entire user resource)
+    - Request body: {name: "John", email: "john@example.com"}
+- PATCH /users/1 (update only the name attribute)
+    - Request body: {name: "Jane"}
+
+Note that some APIs may use PUT for partial updates, but this is not in line with the HTTP specification. In general, it's best to use PATCH for partial updates and PUT for full replacements.
+8/21/24, 3:39 PM - Quazi Mohammad Saad: To remove null fields from a JSON response, you can use the following approaches:
+
+1. *Jackson Annotation*:
+
+Use the `@JsonInclude(Include.NON_NULL)` annotation on the model class to exclude null fields.
+
+```
+@JsonInclude(Include.NON_NULL)
+public class MyModel {
+    private String name;
+    private String email;
+    // Getters and setters
+}
+```
+
+1. *Jackson ObjectMapper*:
+
+Configure the `ObjectMapper` to exclude null fields.
+
+```
+ObjectMapper mapper = new ObjectMapper();
+mapper.setSerializationInclusion(Include.NON_NULL);
+```
+
+1. *Spring Boot Configuration*:
+
+Add the following configuration to your `application.properties` or `application.yml` file.
+
+```
+properties
+spring.jackson.serialization.inclusion=non_null
+```
+
+1. *Gson Library*:
+
+Use the `GsonBuilder` to exclude null fields.
+
+```
+```
+8/21/24, 3:39 PM - Quazi Mohammad Saad: @jsoninclude
+8/21/24, 3:39 PM - Quazi Mohammad Saad: (include_not_null
+8/21/24, 3:40 PM - 18mcmc27 Abhinav Gautam: Json ingore
+8/21/24, 3:40 PM - Quazi Mohammad Saad: Here are some REST (Representational State of Resource) guidelines:
+
+1. *Use nouns for resources*: Use nouns to identify resources, such as `/users` or `/products`.
+
+2. *Use verbs for actions*: Use HTTP methods (GET, POST, PUT, DELETE) to perform actions on resources.
+
+3. *Use plural nouns*: Use plural nouns for collections, such as `/users` or `/orders`.
+
+4. *Use consistent naming conventions*: Use consistent naming conventions throughout your API.
+
+5. *Use HTTP status codes*: Use standard HTTP status codes to indicate success or failure.
+
+6. *Return meaningful error messages*: Return descriptive error messages to help clients understand what went wrong.
+
+7. *Support multiple data formats*: Support multiple data formats, such as JSON and XML.
+
+8. *Use pagination for large collections*: Use pagination to limit the number of items returned in a single response.
+
+9. *Use caching*: Use caching to reduce the number of requests made to your API.
+
+10. *Document your API*: Provide clear and concise documentation for your API.
+
+11. *Use API keys or authentication*: Use API keys or authentication to secure your API.
+
+12. *Rate limiting*: Implement rate limiting to prevent abuse of your API.
+
+13. *Use HTTPS*: Use HTTPS to encrypt data transmitted between clients and your API.
+
+14. *Avoid using query parameters for filtering*: Use query parameters for filtering, but avoid using them for actions.
+
+15. *Use HATEOAS*: Use HATEOAS (Hypermedia As The Engine Of Application State) to provide links to related resources.
+
+Remember, these guidelines are not set in stone, and you may need to adapt them to fit your specific use case.
+8/21/24, 3:43 PM - 18mcmc27 Abhinav Gautam: The output of the provided code will be as follows:
+
+1. **First, the try block executes**:
+   - `9` is printed due to `System.out.println(i);`.
+
+2. **Next, the finally block executes** (regardless of any return statement in the try block):
+   - `"finally block executing"` is printed.
+
+3. **Finally, the method returns**:
+   - `"from finally"` is returned by the method.
+
+So, the console output will be:
+
+```
+9
+finally block executing
+```
+
+And the method will return `"from finally"`.
+8/21/24, 3:44 PM - Quazi Mohammad Saad: The output of the given method will be:
+
+```
+19
+finally block executing
+```
+
+And the method will return: `from finally`
+
+Explanation:
+
+- The `try` block executes successfully, printing `19` to the console.
+- The `finally` block always executes, regardless of whether an exception was thrown or not, printing `finally block executing` to the console.
+- The `return` statement in the `finally` block overrides the previous `return` statements in the `try` and `catch` blocks, so the method returns `from finally`.
+
+Note: The `catch` block does not execute in this case because no exception is thrown in the `try` block. If an exception were thrown, the `catch` block would execute, and the `finally` block would still execute afterwards.
+8/21/24, 3:45 PM - Quazi Mohammad Saad: Here's a simplified explanation of the internal workings of a HashMap:
+
+1. _Array-based storage_: HashMap uses an array to store key-value pairs.
+
+2. _Hash function_: When a key is added, a hash function generates an index based on the key's hash code.
+
+3. _Index calculation_: The index is calculated using the formula: `index = hash code % array length`.
+
+4. _Bucket creation_: If two keys hash to the same index, a linked list (bucket) is created to store multiple entries.
+
+5. _Entry class_: Each entry in the bucket contains the key, value, hash code, and a reference to the next entry.
+
+6. _Put operation_: When adding a new entry, HashMap checks if the key already exists. If it does, the value is updated. Otherwise, a new entry is added to the bucket.
+
+7. _Get operation_: When retrieving a value, HashMap uses the hash function to find the index and then traverses the bucket
+8/21/24, 3:45 PM - 18mcmc27 Abhinav Gautam: Here's an overview of the internal workings of HashMap:
+
+1. *Array-based storage*: HashMap uses an array to store key-value pairs.
+2. *Hashing*: When a key-value pair is added, the key is hashed using the `hashCode()` method, and the resulting hash code is used to determine the index in the array where the pair should be stored.
+3. *Index calculation*: The index is calculated using the hash code and the array's size.
+4. *Chaining*: If two keys hash to the same index (collision), HashMap uses a technique called chaining to store multiple pairs at the same index. Each pair is stored in a linked list.
+5. *Resizing*: When the map grows or shrinks, the array is resized, and all pairs are rehashed and rearranged.
+6. *Load factor*: HashMap maintains a load factor (default 0.75) to determine when to resize.
+7. *Entry objects*: Each key-value pair is stored as an `Entry` object, containing the key, value, hash code, and a reference to the next entry in the chain.
+
+Here's a simplified illustration:
+```
+Array (size 16)
+ Index  |  Key  |  Value  |  Next Entry
+----------------------------------------
+   0    |  K1  |  V1    |  null
+   1    |  K2  |  V2    |  -> Entry(K3, V3)
+   2    |  K4  |  V4    |  null
+   ...
+```
+When you call `get(key)`, HashMap:
+
+1. Hashes the key
+2. Calculates the index
+3. Follows the chain (if present) to find the matching key
+4. Returns the associated value
+
+Similarly, when you call `put(key, value)`, HashMap:
+
+1. Hashes the key
+2. Calculates the index
+3. Adds the key-value pair to the chain (if present) or creates a new chain
+4. Resizes the array if necessary
+
+This is a simplified explanation, but it should give you a basic understanding of how HashMap works internally.
+8/21/24, 3:47 PM - Quazi Mohammad Saad: Java 8 introduced several significant features, including:
+
+1. _Lambda Expressions_: Concise syntax for functional programming.
+
+2. _Method References_: Simplify code with method references.
+
+3. _Functional Programming_: Enhanced support for functional programming.
+
+4. _Stream API_: Process data streams in a declarative way.
+
+5. _Default Methods_: Add new methods to interfaces without breaking existing code.
+
+6. _Static Methods in Interfaces_: Add static methods to interfaces.
+
+7. _Date and Time API_: Improved date and time handling.
+
+8. _Optional Class_: Simplify null handling with the Optional class.
+
+9. _Nashorn JavaScript Engine_: Embed JavaScript code in Java applications.
+
+10. _Type Annotations_: Annotate type parameters for improved code analysis.
+
+11. _Repeating Annotations_: Apply the same annotation multiple times.
+
+12. _Improved Type Inference_: Enhanced type inference for generic types.
+
+13. _Compact Profiles_: Reduced-size profiles for embedded systems.
+
+14. _JavaFX Improvements_: Enhanced JavaFX features and performance.
+
+15. _Security Enhancements_: Improved security features and algorithms.
+
+These features have significantly improved the Java language, making it more concise, efficient, and functional.
+8/21/24, 3:47 PM - Quazi Mohammad Saad: Default methods in Java 8 enable you to add new methods to an interface without breaking existing implementing classes. They provide a way to evolve interfaces without altering their implementations.
+
+Use cases for default methods:
+
+1. *Adding new functionality*: Introduce new methods to an interface without modifying existing classes.
+
+2. *Providing default behavior*: Offer a default implementation for methods, allowing implementors to override them if needed.
+
+3. *Utility methods*: Add utility methods to an interface, making them available to all implementors.
+
+4. *Backward compatibility*: Maintain compatibility with existing code while introducing new methods.
+
+5. *Multiple inheritance*: Achieve multiple inheritance by using default methods in interfaces.
+
+Example:
+
+```
+public interface Printable {
+    void print();
+    
+    // Default method
+    default void printTwice() {
+        print();
+        print();
+    }
+}
+
+public class Document implements Printable {
+    @Override
+    public void print() {
+        System.out.println("Printing document...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Document doc = new Document();
+        doc.printTwice(); // Output: Printing document... Printing document...
+    }
+}
+```
+
+In this example, the `Printable` interface has a default method `printTwice()`, which is available to all implementors, including the `Document` class.
+8/21/24, 3:48 PM - Quazi Mohammad Saad: A Functional Interface in Java is an interface that has:
+
+1. *Exactly one abstract method* (method without a body)
+2. *Zero or more default methods* (methods with a body)
+3. *Zero or more static methods* (methods with a body)
+
+Functional interfaces are used as targets for lambda expressions and method references. They provide a way to represent a single function or method, making it easier to work with functional programming concepts.
+
+Characteristics of Functional Interfaces:
+
+1. **Single
+8/21/24, 3:49 PM - Quazi Mohammad Saad: To identify if an interface is a Functional Interface, follow these steps:
+
+1. *Check for exactly one abstract method*: Ensure the interface has only one method without a body (i.e., an abstract method).
+
+2. *Check for zero or more default methods*: The interface can have zero or more methods with bodies (i.e., default methods).
+
+3. *Check for zero or more static methods*: The interface can have zero or more static methods.
+
+4. *Verify the @FunctionalInterface annotation*: If the interface is annotated with `@FunctionalInterface`, it's a Functional Interface.
+
+5. *Use the Java compiler*: If you try to add a second abstract method, the Java compiler will throw an error, indicating it's a Functional Interface.
+
+Example:
+
+```
+@FunctionalInterface
+interface MathOperation {
+    int operation(int a, int b); // Single abstract method
+    default int doubleOperation(int a, int b) { // Default method
+        return operation(a, b) * 2;
+    }
+    static void printHello() { // Static method
+        System.out.println("Hello");
+    }
+}
+```
+
+In this example, `MathOperation` is a Functional Interface because it has:
+
+- Exactly one abstract method (`operation`)
+- One default method (`doubleOperation`)
+- One static method (`printHello`)
+- The `@FunctionalInterface` annotation
+
+If you try to add another abstract method, the compiler will throw an error.
+8/21/24, 3:49 PM - Quazi Mohammad Saad: The `equals()` and `hashCode()` methods are two fundamental methods in Java that are used to compare objects and store them in data structures like hash tables.
+
+*Equals() Method:*
+
+- The `equals()` method is used to compare two objects for equality.
+- It returns `true` if the objects are equal and `false` otherwise.
+- The method is declared in the `Object` class and can be overridden by subclasses.
+
+*HashCode() Method:*
+
+- The `hashCode()` method returns a hash code value for an object.
+- The hash code is an integer value that represents the object's memory address.
+- The method is used to store and retrieve objects from hash-based data structures like `HashMap` and `HashSet`.
+
+*Contract between equals() and hashCode():*
+
+- If two objects are equal according to the `equals()` method, they must have the same hash code.
+- If two objects have the same hash code, they may or may not be equal.
+
+*Best Practices:*
+
+- Always override both `equals()` and `hashCode()` methods when creating a custom class.
+- Use the same attributes to calculate both the `equals()` and `hashCode()` methods.
+- Ensure that the `hashCode()` method returns the same value for equal objects.
+
+Example:
+
+```
+public class Person {
+    private String name;
+    private int age
+```
+8/21/24, 3:50 PM - 18mcmc27 Abhinav Gautam: [21/08, 3:49 pm] Meta AI: The `equals()` and `hashCode()` methods are two fundamental methods in Java that are used to compare objects and store them in data structures like hash tables.
+
+*Equals Method:*
+
+The `equals()` method is used to compare two objects for equality. It returns `true` if the objects are equal and `false` otherwise. The method is declared in the `Object` class and must
+[21/08, 3:49 pm] Meta AI: The `equals()` and `hashCode()` methods are two fundamental methods in Java that are used to compare objects and store them in data structures like hash tables.
+
+*Equals Method:*
+
+The `equals()` method is used to compare two objects for equality. It returns `true` if the objects are equal and `false` otherwise. The method is declared in the `Object` class and must be overridden by subclasses to provide a meaningful comparison.
+
+*HashCode Method:*
+
+The `hashCode()` method returns a unique integer value for an object, which is used to store and retrieve objects from hash-based data structures like `HashMap`, `HashSet`, and `HashTable`. The method is also declared in the `Object` class and must be overridden by subclasses to provide a meaningful hash code.
+
+*Contract between equals() and hashCode():*
+
+There is a contract between the `equals()` and `hashCode()` methods that must be followed:
+
+1. If two objects are equal according to the `equals()` method, then they must have the same hash code.
+2. If two objects have the same hash code, then they may or may not be equal according to the `equals()` method.
+
+*Best Practices:*
+
+1. Always override both `equals()` and `hashCode()` methods together.
+2. Use the same attributes to calculate both `equals()` and `hashCode()`.
+3. Make sure `hashCode()` returns a consistent value for an object throughout its lifetime.
+4. Use a prime number to combine hash codes of multiple attributes.
+
+*Example:*
+
+```
+public class Person {
+    private String name;
+    private int age;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Person person = (Person) obj;
+        return age == person.age && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+```
+
+In this example, the `Person` class overrides both `equals()` and `hashCode()` methods to provide a meaningful comparison and hash code calculation based on the `name` and `age` attributes.
+8/21/24, 3:57 PM - Quazi Mohammad Saad: Koi nhin aya hai
+8/21/24, 4:00 PM - Quazi Mohammad Saad: Password bata mobile ka
+8/21/24, 4:00 PM - Quazi Mohammad Saad: Pathak ka
+8/21/24, 4:00 PM - Quazi Mohammad Saad: @918678042920
+8/21/24, 4:07 PM - Quazi Mohammad Saad: Msg nhin arha
+8/21/24, 4:07 PM - Quazi Mohammad Saad: OTP wala
+8/21/24, 4:08 PM - 18mcmc11 Abhishek Pathak: Hai ya chla gya delivery wla
+8/21/24, 4:08 PM - Quazi Mohammad Saad: Hai
+8/21/24, 4:09 PM - Quazi Mohammad Saad: Adhar photocopy hai kya?
+8/21/24, 4:09 PM - 18mcmc11 Abhishek Pathak: Dudna pdega
+8/21/24, 4:09 PM - Quazi Mohammad Saad: Adhar ka photo bhejdo
+8/21/24, 4:10 PM - 18mcmc11 Abhishek Pathak: Bolo 1 hr baad aye
+8/21/24, 4:11 PM - 18mcmc27 Abhinav Gautam: Questions
+8/21/24, 4:11 PM - 18mcmc27 Abhinav Gautam: Kya karna hai
+8/21/24, 4:11 PM - Quazi Mohammad Saad: Delivery Wale ko adhar card send krdo
+8/21/24, 4:14 PM - Quazi Mohammad Saad: Are soft copy bhehde pathak
+8/21/24, 4:14 PM - Quazi Mohammad Saad: Nhin toh leke chala jayega
+8/21/24, 4:15 PM - Quazi Mohammad Saad: Mobile me adhar nhin hai kya?
+8/21/24, 4:22 PM - 18mcmc11 Abhishek Pathak: Explain bhej de iska
+8/21/24, 4:22 PM - 18mcmc11 Abhishek Pathak: Pura nhi ho pauega
+8/21/24, 4:22 PM - 18mcmc11 Abhishek Pathak: Quaxi bol
+8/21/24, 4:23 PM - 18mcmc27 Abhinav Gautam: Certainly! Here's a step-by-step explanation of the simplified Spring Boot application that retrieves an address using `JsonNode`:
+
+### **1. The Setup**
+
+The goal is to create a Spring Boot application with two main components:
+
+- **A Service**: To make the HTTP request, parse the JSON response, and extract the address.
+- **A Controller**: To handle HTTP requests and return the address.
+
+### **2. The Service Class (`UserService`)**
+
+**Purpose**: The service is responsible for fetching data from an external URL, parsing the JSON response, and extracting the address.
+
+#### Key Components:
+
+- **RestTemplate**: A Spring class used to make HTTP requests. It's used here to fetch the JSON data from the URL.
+- **ObjectMapper**: A Jackson library class used to parse the JSON response. The `ObjectMapper` class provides methods to convert JSON into Java objects or `JsonNode`.
+
+#### Code Walkthrough:
+
+- **HTTP Request**: `restTemplate.getForObject(url, String.class);` sends a GET request to the URL and retrieves the JSON response as a `String`.
+
+- **Parsing JSON**: 
+  - `objectMapper.readTree(jsonResponse);` converts the JSON string into a `JsonNode` object, which represents the entire JSON structure.
+  - `JsonNode addressNode = rootNode.path("address");` navigates through the JSON tree to get to the `address` field.
+
+- **Extracting Address**: 
+  - The service extracts specific fields from the `addressNode` (like `street`, `suite`, `city`, `zipcode`) using `asText()`, which converts the `JsonNode` value to a `String`.
+  - These fields are concatenated to form the complete address.
+
+- **Returning the Address**: The method returns the full address as a single string.
+
+#### Example Output:
+
+If the JSON response looks like this:
+```json
+{
+  "address": {
+    "street": "1234 Main Street",
+    "suite": "Suite 101",
+    "city": "Springfield",
+    "zipcode": "12345"
+  }
+}
+```
+
+The service will return:
+```
+"1234 Main Street, Suite 101, Springfield, 12345"
+```
+
+### **3. The Controller Class (`UserController`)**
+
+**Purpose**: The controller handles HTTP requests and invokes the service to get the address. It’s the entry point for users to access the service.
+
+#### Key Components:
+
+- **`@RestController`**: Marks the class as a controller where every method returns a domain object instead of a view.
+
+- **`@GetMapping("/address")`**: Maps HTTP GET requests to the `getAddress()` method. When a request is made to `/address`, this method is called.
+
+- **`getAddress()`**: This method simply calls the `UserService`'s `getUserAddress()` method and returns its result.
+
+### **4. Running the Application**
+
+When the Spring Boot application is running, users can access the `/address` endpoint via a web browser or API client. The controller
+8/21/24, 4:30 PM - 18mcmc11 Abhishek Pathak: Address return krna hai kewal
+8/22/24, 1:18 PM - Quazi Mohammad Saad: Kal interviewet ne jo third party api diya tha 
+Usko send krna
+8/22/24, 1:35 PM - 18mcmc11 Abhishek Pathak: https://jsonplaceholder.org/users

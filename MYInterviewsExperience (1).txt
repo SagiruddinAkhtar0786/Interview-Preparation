@@ -1,0 +1,404 @@
+------------------------------------------------------------------
+1. fluentgrid - Tech 1
+-----------
+Introduce yourself
+
+what is the current java version u r using and what is its features - functional interface, lambda expressions, 
+streams:: default static in intrfc, optional,  sys.out::println
+
+finally, try ,catch
+internal working of hash map
+whats concurrent hash map, when n y it is used ahead of hash map
+
+dispatcher servlet
+view resolver
+Spring MVC, explain brief
+
+abstract methods
+oracle sql - joins
+ 
+program - having a string array with duplicates, return only unique Strings with dictionary order 
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+2. fluentgrid - Tech 2
+-----------
+
+asked similar ques to tech1 but in depth
+having a string duplicates and unique letters in it, reutrn a string which has duplicate characters and another string has only unique characters4
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+Al Ansari - HR 1:
+-----------
+Introduce yourself 
+Brief on product 
+Challanges
+Based out of where?
+Family
+Hometown 
+Notice period
+Compensation 
+reason for switch
+------------------------------------------------------------------
+------------------------------------------------------------------
+3. Al Ansari - Tech 1:
+-----------
+
+Are there any other ways I can check without using the compare 2 and equals method?
+
+Program / How to generate a random number in Java 
+
+How to add 2 arraylist and return in a new arraylist
+
+
+SQL : I'm having a table of student and columns. Student name roll number Father name I want to find out how many rule numbers are duplicate in that table where I don't know the rollno
+
+SELECT roll_number, COUNT(*) as count 1FROM students GROUP BY roll_number HAVING COUNT(*) > 1;
+
+
+SELECT COUNT(*) as duplicate_count FROM ( SELECT roll_number FROM students GROUP BY roll_number HAVING COUNT(*) > 1 ) as duplicates;
+------------------------------------------------------------------
+------------------------------------------------------------------
+4. Accenture - Tech 1:
+-----------
+
+Functional interface 
+Lamba expression 
+Spring boot basic annotations
+Employees end point for fetch all. Json format retrieving data
+related to Application i worked at azentio
+Which sub motivated to software side in btech
+Coding: bubble sort Algorithm psuedo code and explain about it
+Db config how
+How Working happens at azentio, my role. my latest CR i worked on - CSV file uploading for bulk data update 
+Spring boot
+Annotations 
+Request mapping 
+Response body 
+Url
+Micro service
+Json format data fetching
+Jpa repository 
+Dba db config
+
+
+Reviewd as  - Need to be better.
+------------------------------------------------------------------
+------------------------------------------------------------------
+5. TCS - Tech 1(Finished in 10 mins, as not suitable for role 😪 ):
+-----------
+
+Try with resources 
+Wsdl file
+Rest methods with security
+Soap usage
+Java 8 
+Flat map java 8 / streams 
+Types of streams in java 8
+in Spring, how to use external properties file 
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+6. Apexon (for Goldman Sachs client) - Tech 1:
+----------- 
+
+Memory leak related
+Try with resources, string initialization 
+Serialisation Why used
+Spring boot
+String string builder
+Java 8, 
+Java 17 new features 
+Hashcode accountable related something 
+Java 8 default Garbage collector
+Jre, jdk diff and executable jar can be running just with jre? 
+Checked unchecked exceptions
+Heap memory size increase decrease in cmd? 
+
+coding :: 
+Int arr. [] = (1,6,-6,0,7,9,0,0)
+Output: (1,6,-6,7,9,0,0,0)
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+7. Springlogix (Face to face) - Tech 1:
+-----------
+Introduction
+Aop hibernate 
+Mappings
+Applications at azentio 
+Filters for o auth basic auth
+Program to write 6500 in words 6 thousand five hundred  - used enum and switch 
+CSV file upload to db and records checking validations
+Front end ui what used? 
+In correlation id transaction I'd to printing logs about one method we are getting hit like multiple times and if we check in logs lot of records will be there which are parallely getting executed. I want to differentiate between the flow like first heat, separate line and second hand 
+how to give non mandatory for fields in request instead of in dto level using not null
+regarding low grades in btech
+Types of maps 
+What map is used for sorting order of insertion
+Compertance interface sth in SQL like how to get datatypes of columns in db 
+Application explain and projects used in 3.4 years other than amlock
+
+In real time what will AMLOCK do / helpful with transactions .does it stop
+What jars used for pdf writing or CSV files writing
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+8. Wissen  - Tech 1:
+-----------
+
+Custom immutable class 
+Custom exception class with checked and unchecked exceptions 
+second hgihest salary from a table
+
+
+whats output of below code 
+
+class Parent {     
+	Parent (String s){         
+		System.out.println("Parent Class Param  "+s);     
+	}	 
+} 
+
+public class Child extends Parent {     
+	Child (){         
+	this("Constructor");         
+	System.out.println("Child Class Default Constructor");     
+}    
+
+ Child (String s){         
+	System.out.println("Child Class Param "+s);     
+ }     
+ 
+ public static void main(String[] args) {
+ Child obj = new Child();     
+ } 
+ 
+ }
+
+output : 
+
+Parent Class Param Constructor
+Child Class Param Constructor
+Child Class Default Constructor
+
+
+Write a query to find out the Employees whose salary is more that or equal to salaries of their manager.
+
+Expected Output: Employee_Id		Employee_Name 
+					4				Suresh 
+					8				Piyush
+
+
+managers : 1,2,6,7
+
+	 select Employee_Id,Employee_Name from employee where salary 
+	 
+ Employee_Id	Employee_Name	Manager_Id	Salary
+	 1			Manish			2			4000 
+	 2			Hitesh			7			3000 
+	 3			Ramesh			1			3000 
+	 4			Suresh			1			5000 
+	 5			Pankaj			2			2000 
+	 6			Suraj			6			1000 
+	 7			Kumar			null		8000 
+	 8			Piyush			2			4000
+	 
+	 
+	 
+	 query : SELECT e1.Employee_Id, e1.Employee_Name
+FROM employee e1
+JOIN employee e2 ON e1.Manager_Id = e2.Employee_Id
+WHERE e1.Salary >= e2.Salary;
+
+
+Platforms Required at Train Station:
+
+Given an array of train arrival and departure timing at a railway station, calculate the number of platforms required to 
+manage all the train arrivals and departures.
+
+The arrival and departure timings are given in 24 hours format (ex. 3PM - 1500, 6.30AM - 0630, etc)
+Ex1. 
+train timings : {0030,0120}{0600, 0700}{1200,1500} ans = 1
+All trains can be stopped on single platforms as their timings do not overlap
+
+train timings : {0600,0700}{0630,0820}{1200,1500} ans = 2
+First and second train overlapping times of stay at station. So station needs two platforms.
+------------------------------------------------------------------
+------------------------------------------------------------------
+9. Infor  - Tech 1:
+-----------
+Comparator comparable 
+Implicit in JSP
+Custom exception
+Threads creation ways, deadlock scenario 
+Ioc spring di
+Scroll tag default or seperate dedicated in JSP
+
+Employee list objects /List sorting with comparator 
+
+Marque in JSP
+Overriding in custom exception 
+SQL index, ddl, dml commands. Triggers. 
+Spring vs spring boot differences
+Static final diff 
+
+Multiple Exception SQL, io, arithmetic exceptions catching in one catch block? 
+
+Modifiers types
+Super class of all - object
+Collections - list map set
+Super class of list and map are same? Or not? 
+
+In set if I insert values, it will be inserted in sorting order, what's the sorting mechanism used there. 
+
+
+Var types and Instance global local var differences.
+
+Prepared statement, statement differences. 
+
+write a Program including all the java oops concepts in it
+------------------------------------------------------------------
+------------------------------------------------------------------
+10. Infor - Tech 2:
+-----------
+ In a class, if I'm having two synchronized instance methods, can I thread to access the method? 2. When thread one is already running in synchronized instance method?
+ What is the case if the methods are synchronized and static not instance?
+ Let's say I'm having an employee class with the employee ID, department name and designation and I want to perform an operation streams operation on that list where I don't only want to get employee names from that whole list
+ What are Java generics?
+ Can I use multiple parameters to a comparable overridden method of compared to?
+ about possible memeory leakage issue occurances?
+ When I insert multiple employee objects having variable employee department name and designation into the reset, what will happen and how does the sorting can be based on?
+------------------------------------------------------------------
+------------------------------------------------------------------
+11. JPMC - 3 rounds in a day with 15 mins break
+-----------
+
+1st discussion :
+-----------
+
+More of a Manageral + tech round 
+
+
+introduction 
+about my study , my hometown
+how chose CSE and after btech how did  i join azentio
+my role at azentio
+how were first 6 months
+recent projects
+did u manage any team or people?
+how do u manage conflicts that occur while disucssing ideas
+how does development process go on
+
+2nd discussion :
+-----------
+
+1. generate all possible substrings of a given string such that no two characters in the substring are repeated
+2. Gave a java file written in java 15 and asked to code review on it.
+
+	i suggsted about storing passwords or sensitive info in db config or prpperty files instead of hardcoding in java 
+	and explained the code , 
+	suggested removing of unneccesary code
+
+3rd discussion :
+-----------	
+
+Design related to a parking system complete automation using AI service to capture vechiles entry and exit and then generate bill
+
+
+below is how the last outcome looked like ,i added few blocks in the below predefined chart 
+
+   +--------------------------+
+   |  Motion Detection of      |
+   |        Vehicle            |
+   +--------------------------+
+               |
+               v
+   +--------------------------+
+   |  AI Service to Capture    |
+   |    Vehicle Number         |
+   +--------------------------+
+               |
+               v
+   +--------------------------+       +-----------------+
+   |  Parking Management       | <---->|  Pricing Service |
+   |       Service             |       +-----------------+
+   +--------------------------+
+               |
+               v
+   +--------------------------+
+   |    Database / Cloud       |
+   +--------------------------+
+               ^
+               |
+               v
++--------------------------+       +--------------------------+
+|  Parking Fee Webapp       |<---->|         Server            |
++--------------------------+       +--------------------------+
+               |                             ^
+               v                             |
+   +--------------------------+              |
+   |  Parking Management       |<------------+
+   |       Service             |
+   +--------------------------+
+	
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+12. Porter - Tech 1:
+-----------
+
+this 1hour interview happened only discussing about below requirement 
+
+
+Design a microservice for processing and storing payment transactions in a distributed payments platform.
+ Consider aspects such as transaction security, extensibility, and fault tolerance. Describe the key components, 
+ interactions, and data storage mechanisms involved in your design. Additionally, how you would handle concurrent transactions, 
+ ensure data consistency, and provide a reliable and efficient system for both users and administrators.
+
+asked mostly about my approaches, tables i would use and their columns about end points, 
+
+below is my written explanation to him
+
+paymentapplication/getUser
+			/makePayment
+			/getPaymentStatus
+
+			/createUser
+
+			/getAllPrevTransactions
+			/myProfile
+			/checkBalance
+
+
+@RestController 
+
+
+Database 
+
+Tbl_users : FullName, usercode, mobileno, gmailid, dob, bank, account no, customer id, location, address. 
+Tbl_transactions : transactionid,  Remittencecustomerid, BeneficiaryCustId, usercode, amount, currencyCode, Country/Place, Status.
+Tbl_admin:
+tbl_customerid
+
+tbl_failedTransactions ; 
+Tbl_auditlog : 
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+13. Infor (for another role) - Tech 1:
+-----------
+
+Introduction 
+In Spring boot exception handling globally
+SQL - second highest age from table
+Program - Program to print a repeated character and it's occurance count in a string
+Program to reverse a string
+ ex : Saharsh output: hsrahaS
+
+Method overloading/ overriding and it's diff
+What are the clients you've worked with their names and what's your role in it
+
+Whats a web application, it's characters 
+That's it

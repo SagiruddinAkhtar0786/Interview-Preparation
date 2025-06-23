@@ -1,0 +1,47 @@
+Linked Blocked Dequeue
+Jboss profiling like deploying 2 or 3 services independently or stopping 1 service and other service running without effecting
+Log managing in application
+Syntax to read a file and check
+find palindrome in a string Ex-iamammaras--ans:-amma
+soft reference weak reference
+
+treeset
+Employes object group by department ID
+how will treeset sort internally if the treeset has object of Employee
+
+what happens when 2 synchronised methods are there in one class 
+2 static synchronised/  one static synchronised and one normal synchronised method how threads work in that case
+
+Atomic variabls Vs volatile
+best way to create thread
+custom Exceptions
+minor ang major Garbage collectors
+height of tree
+types or references(soft and weak reference)
+patch and put method
+design patterns
+AOP/Spring security
+which frontend Js best suits for you application ,how do you determine
+Application performance issues ,analysing heap dump,thread dump .tools to monitor application logs,health,performance dumps
+
+Constructor annotations,@postconstructor
+REST Template web template
+wait() and sleep() method difference
+Annotations for POJO class
+Exception handling in spring boot with custom exceptions
+scheduling anonotation
+constructor and POJO class level annotations
+how to write a single condition to check if list is null and empty
+PAtch and put HTTP method difference 
+Profiling in SPring boot
+
+Executor service and its drawbacks
+thread stack in class calling builder class in builder class calling impementationn class constructor
+Memory efficiency in java
+is heap memory thread safe
+Explain Heap memory ,JVM memory utilization process
+HashMap algoritham,Put and get method working
+segmentation in Concurrent HashMap
+if we using banking application how we achieve security in banking appln with java 
+Garbage collections internal algoritham and how it collects 
+Greedy algoritham problem solving

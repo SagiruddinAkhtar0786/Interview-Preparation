@@ -1,0 +1,72 @@
+Round 1
+-----------
+1. Given string “joe is a good person” print all the odd length words in reverse order
+2. Given an integer N  output is X                  where 2* sum of digits of N = sum of digits of X and X > N
+3. Given string S = ABAB output return an integer ( how times we need to remove A and B ) so that it string will be ABB ( continuous A’s and B’s )
+4. Given string = ABBBAB output return integer  ( least length of unique substring )
+
+Round 2
+-------------------
+1. Array rotation without creating another array
+[ 1,2,3,5]  rot = 2 then [ 3,5,1,2 ]
+2. Project brief you are working
+3. Type of dependency injections in spring
+4. Hashmap working
+5. Hashing equals
+6. Comparator comparable with example 
+7. Class{                                                                    Private string name ;                                  Private string age ;                                                        Private string category;    }
+Set the category to minor of each person where their age is less than 18 by using stream ( do not use for loop ) given arraylist al contains list of persons 
+7. Brief of MVC architecture
+8. Employee table
+Empid	Empname	Cost
+1	Sravani	50000
+2	Ajay	80000
+Category table
+Category	Empid
+Cat1	1
+Cat2	2
+
+Return employee details where if employee is under cat1 then given 10% discount on cost if employee is under cat2 then given 50% discount on cost
+We need to use CASE keyword here
+
+Round 3
+-------------------
+1. Project 
+2. MVC architecture
+3. Program to print pattern.    
+*                                                                                   
+*  *                                                                             
+*   *   *
+4. Dependency injection types
+5. Auto wiring and its modes 
+6. Difference b/w singleton and prototype scope default scope of bean and when to use prototype scope
+7. Dependency injection and its type
+8. Difference ways of configuring spring application context ( implicit and explicit ways )
+9. Rest Api and soap diff
+10. Diff b/w put and patch http methods
+11. Rest API  - how to create a resource or uri template syntax
+12. OAuth authentication implementation
+13. How do you handle authentication and authorisation ( role configuration ) in your project 
+14. List and set difference
+15. Manager table
+Employee id 	Emp name	Manager id
+123	xyz	001
+124	Abc	002
+001	xyz	Null
+		Null
+Here manager is also a emoloyeee thats y 001 is present in employeeid column
+Return all the manager details by using left outer join
+
+16.         public class S {.                                                 public static void main(String[] args) {             method(null);          }
+static void method(Object o) {.              System.out.println("object");
+}
+static void method(String s) {.   System.out.println("string");  }    }
+
+Tell the output need correct explanation
+17. Final , Finally , Finalize
+18. Java8 key features
+19. Stream in details explain terminal and intermediate operations
+20. throw and throws difference and rules exception unboxing
+21. Solid principles in java
+22.Exception outboxing rules
+23.Feild injection in spring

@@ -1,0 +1,78 @@
+Coding
+----------
+Second largest element in array
+Given an array = [0,1,0,1,0] move all zeros to end
+HashMap working
+Agregation and composition
+
+Code snippets
+--------------
+import java.util.HashMap;
+
+public class CustomHashMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e1=new Employee("abc","Hyderabad");
+		Employee e2=new Employee("xyz","Vizag");
+		
+		HashMap<Employee,String> map=new HashMap<>();
+		map.put(e1, "I am foo");
+		map.put(e2, "I am Bar");
+		
+		System.out.println(map.get(e1));
+		System.out.println(map.size());
+		
+	}
+
+}
+class Employee{
+	private String name;
+	private String city;
+	
+	public Employee(String name, String city) {
+		super();
+		this.name = name;
+		this.city = city;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	@Override
+    public int hashCode() {
+        return name.length();
+    }
+	
+	@Override
+	public boolean equals(Object obj) {
+		 if (this == obj) {
+	            return true;
+	      }
+	      if (obj == null || getClass() != obj.getClass()) {
+	            return false;
+	      }
+	      Employee employee = (Employee) obj;
+	      return name.length() == employee.name.length();
+	}
+}
+
+what it will print
+
+
+Write your own arraylist implementation class
+
+Reverse a linkedlist using pointer approach
+
+

@@ -1,0 +1,56 @@
+In Spring framework, IOC container is responsible to inject the dependency. We provide metadata to the IOC container either by XML file or annotation.
+
+IoC Container
+The main tasks performed by IoC container are:
+
+to instantiate the application class
+to configure the object
+to assemble the dependencies between the objects
+
+Dependency Injection (DI) is a design pattern that removes the dependency from the programming code so that it can be easy to manage and test the application. Dependency Injection makes our programming code loosely coupled
+
+Two ways to perform Dependency Injection in Spring framework
+Spring framework provides two ways to inject dependency
+
+By Constructor
+By Setter method
+
+***************************************************************
+spring MVC
+
+Here, we redirect a view page to another view page.
+
+
+sending data from controller to view
+in place of expression and scriptlate tage we can use jsp-expression ${} in JSP to get data from controller ,
+no need to to use getAttribute() tag in jsp
+
+for list ---> jstl is used to use list in jsp, for example if we want to transverse list in jsp then need to include JSTL jar also
+
+
+
+sending Data from view to controller;
+form--> submit--> url hit ---> data gone to controlller ==> get data from HttpServletrequest object and Httpservletreqsponse(Servlet container) object
+
+Model,=========>
+
+The HttpServletRequest req is used to read the HTML form data provided by the user.  ==> String name=req.getParameter("name");
+The Model contains th e request data and provides it to view page
+@ControllerAdvice ==> It’s also important that we annotate the respective class as @ControllerAdvice. Thus, we can add values in Model that’ll be identified as global.
+@RequestParam => will get data one by one field data ===> the @RequestParam annotation is used to read the form data and bind it automatically to the parameter present in the provided method. So, it ignores the requirement of HttpServletRequest object to read the provided data. 
+
+The @RequestParam is used to read the HTML form data provided by a user and bind it to the request parameter.
+The Model contains the request data and provides it to view page.
+@ModelAttribute ==> will get all fields value from form in once time
+As the introductory paragraph revealed, we can use @ModelAttribute either as a method parameter or at the method level.
+In general, Spring MVC will always make a call to that method first, before it calls any request handler methods. Basically, @ModelAttribute methods are invoked before the controller methods annotated with @RequestMapping are invoked
+
+@requestmapping  ==> maps the url in controller class
+
+@Autowired       ===> 
+
+
+HttpServletRequest request => String name = request.getParameter("name");>>>>>>>		System.out.println("name >"+name);
+
+
+when to use request.getAttribut and when to use request.getParameter==>name attribute k liye we can use
